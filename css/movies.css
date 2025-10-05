@@ -1,32 +1,44 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin:0; padding:0; }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #0f1115, #1a1c22);
+  background: linear-gradient(145deg, #0c0d11, #181b23);
   color: #e0e0e0;
   min-height: 100vh;
   text-align: center;
+  overflow-x: hidden;
+}
+
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-
-header {
-  width: 100%;
+  gap: 15px;
   padding: 50px 20px;
-  background: rgba(20,20,25,0.85);
   backdrop-filter: blur(10px);
+  background: rgba(20,20,25,0.85);
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #333;
 }
+
+.atomlogo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.atomlogo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: spin 3s linear infinite;
+  transition: transform 0.3s ease;
+}
+.atomlogo:hover { transform: rotate(5deg) scale(1.05); }
+
+@keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
 
 h1 {
   font-size: 2.8em;
@@ -45,8 +57,7 @@ h2 {
   content: '|';
   animation: blink 1s step-end infinite;
 }
-@keyframes blink {50%{opacity:0;}}
-
+@keyframes blink { 50%{opacity:0;} }
 
 nav {
   display: flex;
@@ -72,51 +83,13 @@ nav a:hover {
 }
 
 
-.atomlogo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px auto;
-}
-.atomlogo {
-  max-width: 70px;
-  max-height: 70px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  animation: spin 3s linear infinite;
-}
-.atomlogo:hover { transform: rotate(5deg) scale(1.05); }
-@keyframes spin {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-
-
-.welcome-section {
-  padding: 60px 20px;
-  background: rgba(255,255,255,0.03);
-  margin: 50px auto;
-  max-width: 800px;
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-}
-.welcome-section p {
-  font-size: 1.25em;
-  color: #ccc;
-  line-height: 1.6em;
-  max-width: 600px;
-  margin: 0 auto;
+@media(max-width:700px){
+  h1{font-size:2.2em;}
+  h2{font-size:1.1em;}
+  .carousel-section{max-width:95%;}
 }
 
-
-.games-section {
-  padding: 60px 20px;
-  max-width: 960px;
-  margin: 0 auto 60px;
-}
-
-#game-search {
+#search-input {
   padding: 10px 14px;
   font-size: 1em;
   border-radius: 10px;
@@ -127,12 +100,13 @@ nav a:hover {
   margin: 20px 10px 20px 0;
   transition: border 0.3s, box-shadow 0.3s;
 }
-#game-search:focus {
+#search-input:focus {
   border-color: #5ac8fa;
   box-shadow: 0 0 8px #5ac8fa55;
 }
 
-#sort-alpha-btn, #back-btn {
+
+.filters button {
   padding: 10px 16px;
   font-size: 1em;
   border-radius: 10px;
@@ -144,13 +118,13 @@ nav a:hover {
   margin: 10px 5px;
   transition: background 0.3s, transform 0.2s;
 }
-#sort-alpha-btn:hover, #back-btn:hover {
+.filters button.active,
+.filters button:hover {
   background: #49b7d6;
   transform: scale(1.05);
 }
 
-
-#game-list {
+#movie-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 18px;
@@ -158,92 +132,86 @@ nav a:hover {
   margin-top: 30px;
 }
 
-.game-card {
+
+.movie {
   background: #1a1c22;
   border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   padding: 16px;
   transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.game-card:hover {
+.movie:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   background: #272a33;
 }
-.game-card img.game-image {
+
+.movie img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  display: block;
   margin-bottom: 12px;
 }
-.game-card h3 {
+
+.movie h3 {
   color: #5ac8fa;
   margin-bottom: 6px;
 }
-.game-card p {
+
+.movie .year {
   font-size: 0.95em;
   color: #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
-.game-buttons {
+
+.read-more-content {
+  font-size: 0.9em;
+  color: #ccc;
+  text-align: center;
+  max-height: 60px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.read-more-content.expanded {
+  max-height: 500px;
+}
+
+.read-more-toggle {
+  display: block;
+  font-size: 0.85em;
+  color: #5ac8fa;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.links {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
-.game-buttons button, .game-buttons a {
-  padding: 8px 14px;
+.links a {
+  padding: 6px 12px;
   background: #5ac8fa;
   color: #000;
-  border: none;
   border-radius: 8px;
   font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.game-buttons button:hover, .game-buttons a:hover {
+.links a:hover {
   background: #49b7d6;
 }
-
-#game-iframe-container {
-  position: fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  background:#000;
-  z-index:10000;
-  display:flex;
-  flex-direction:column;
-}
-.iframe-header {
-  padding:10px;
-  background:#111;
-  color:#fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.iframe-header button {
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:1.5em;
-  cursor:pointer;
-}
-#game-iframe-container iframe {
-  flex:1;
-  border:none;
-  width:100%;
-}
-
 
 @media(max-width:700px){
   h1{font-size:2.2em;}
   h2{font-size:1.1em;}
-  .welcome-section p{font-size:1.1em;}
-  #game-list{gap:14px;}
+  #movie-list{gap:14px;}
+  .movie img{height:120px;}
 }

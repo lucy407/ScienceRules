@@ -1,4 +1,4 @@
-let allGames = []; // store games globally for search & sort
+let allGames = [];
 
 fetch('../scripts/games.json')
   .then(response => {
@@ -45,7 +45,7 @@ function displayGames(games) {
   });
 }
 
-// search functionality
+
 const searchInput = document.getElementById('game-search');
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
@@ -55,7 +55,7 @@ if (searchInput) {
   });
 }
 
-// alphabetical sort
+
 const sortBtn = document.getElementById('sort-alpha-btn');
 if (sortBtn) {
   sortBtn.addEventListener('click', () => {

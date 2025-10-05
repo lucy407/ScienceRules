@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Einsteinium</title>
+<link rel="icon" type="image/png" href="../assets/atom.png">
+<link rel="stylesheet" href="../css/movies.css">
+<script src="../scripts/js/loading.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="../assets/atom.png" alt="Einsteinium Logo" class="atomlogo">
+    <div>
+      <h1>Einsteinium</h1>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../pages/games.html">Games</a>
+
+</nav>
+<main class="content">
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search...">
+    <span id="result-count"></span>
+  </div>
+
+  <div class="filters">
+    <button data-type="popular" class="filter-btn active">Popular</button>
+    <button data-type="movie" class="filter-btn">Movies</button>
+    <button data-type="tv" class="filter-btn">Shows</button>
+  </div>
+
+  <div id="movie-list"></div>
+</main>
+
+
+<script src="../scripts/movie.js"></script>
+</body>
+</html>
