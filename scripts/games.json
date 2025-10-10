@@ -52,5 +52,41 @@
     "description": "Minecraft is a sandbox video game that allows players to explore, build, and survive in a procedurally generated, block-based world.",
     "url": "../games/Minecraft.html",
     "image": "../assets/Minecraft.png"
+  },
+  {
+    "title": "Yume Nikki",
+    "description": "Yume nikki is a surreal indie game where you explore the dream world of a reclusive girl, collecting strange effects in a haunting, wordless adventure.",
+    "url": "../games/Yume Nikki.html",
+    "image": "../assets/yumenikki.png"
+  },
+  {
+    "title": "Learn To Fly",
+    "description": "Learn to Fly is a fun, physics-based game where you launch a penguin across the sky, upgrading gear and skills to fly farther with each attempt.",
+    "url": "../games/Learn to Fly.html",
+    "image": "../assets/learntofly.png"
+  },
+  {
+    "title": "Granny",
+    "description": "Granny is a horror stealth game where you must escape a creepy house without being caught by Granny, using stealth, puzzles, and quick thinking to survive.",
+    "url": "../games/Granny.html",
+    "image": "../assets/Granny.png"
+  },
+  {
+    "title": "Cut the Rope",
+    "description": "Cut the Rope is a physics-puzzle game where you feed candy to a little monster named Om Nom by cutting ropes and triggering fun chain reactions.",
+    "url": "../games/Cut the Rope.html",
+    "image": "../assets/cuttherope.png"
+  },
+  {
+    "title": "Friday Night Funkin'",
+    "description": "Friday Night Funkin’ is a rhythm game where you hit the right notes to rap and sing your way through quirky, challenging music battles.",
+    "url": "../games/Friday Night Funkin.html",
+    "image": "../assets/fridaynightfunkin.png"
+  },
+  {
+    "title": "Cookie Clicker",
+    "description": "Cookie Clicker is an incremental game where you bake cookies by clicking and buying upgrades, watching your cookie empire grow endlessly.",
+    "url": "../games/Cookie Clicker.html",
+    "image": "../assets/cookieclicker.png"
   }
 ]
