@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* { box-sizing: border-box; margin:0; padding:0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -18,8 +22,8 @@ header {
   gap: 15px;
   padding: 50px 20px;
   backdrop-filter: blur(10px);
-  background: rgba(20,20,25,0.85);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  background: rgba(20, 20, 25, 0.85);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid #333;
 }
 
@@ -37,9 +41,14 @@ header {
   animation: spin 3s linear infinite;
   transition: transform 0.3s ease;
 }
-.logo:hover { transform: rotate(5deg) scale(1.05); }
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
 
-@keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 h1 {
   font-size: 2.8em;
@@ -58,7 +67,9 @@ h2 {
   content: '|';
   animation: blink 1s step-end infinite;
 }
-@keyframes blink { 50%{opacity:0;} }
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
 nav {
   display: flex;
@@ -83,10 +94,9 @@ nav a:hover {
   box-shadow: 0 0 12px #5ac8fa44;
 }
 
-
 .carousel-section {
   margin: 2.5rem auto;
-  max-width: 760px;
+  max-width: 960px;
   text-align: center;
 }
 
@@ -97,66 +107,44 @@ nav a:hover {
 }
 
 .carousel {
-  position: relative;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px;
   border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.35);
-  aspect-ratio: 16/9;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.12));
 }
 
 .carousel-slide {
-  position: absolute;
-  inset:0;
-  opacity:0;
-  transform: scale(0.98);
-  transition: all 0.8s ease;
-  pointer-events:none;
+  background: #111318;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.carousel-slide.active { opacity:1; transform: scale(1); pointer-events:auto; }
+.carousel-slide:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+}
 
 .carousel-slide img {
-  width:100%;
-  height:100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius:14px;
+  display: block;
 }
 
-.carousel-slide .caption {
-  position: absolute;
-  bottom:0;
-  width:100%;
-  padding:0.6rem 1rem;
-  background: rgba(0,0,0,0.55);
-  color:#fff;
-  font-weight:600;
-  border-radius:0 0 14px 14px;
-  text-align:left;
+.carousel-title {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1px solid #222;
 }
 
-
-.carousel-btn {
-  position: absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background: rgba(20,20,20,0.5);
-  border:none;
-  color:white;
-  font-size:1.5rem;
-  padding:0.4rem 0.65rem;
-  border-radius:999px;
-  cursor:pointer;
-  transition: all 0.2s ease;
-  z-index:3;
-  backdrop-filter: blur(4px);
-}
-.carousel-btn:hover { background: rgba(20,20,20,0.7); transform: translateY(-50%) scale(1.05);}
-.carousel-btn:active { transform: translateY(-50%) scale(0.97);}
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-
-@media(max-width:700px){
-  h1{font-size:2.2em;}
-  h2{font-size:1.1em;}
-  .carousel-section{max-width:95%;}
+@media (max-width: 700px) {
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.1em; }
+  .carousel-section { max-width: 95%; }
 }
