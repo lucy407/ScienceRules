@@ -92,7 +92,31 @@
   {
     "title": "Osu!",
     "description": "Osu! is a fast-paced rhythm game where you click, slide, and spin to the beat of songs with absurd precision and anime-level energy.",
-    "url": "../games/Osu!/sciencerules/game/osu!.html",
+    "url": "../games/osu!.html",
     "image": "../assets/osu.png"
+  },
+  {
+    "title": "BLOODMONEY",
+    "description": "BLOODMONEY! is a darkly twisted clicker game where you’re desperate to raise $25,000 for a life-saving surgery. You meet Harvey Harvington, who offers $1 per click—but to earn more, you must inflict pain on him using various tools.",
+    "url": "../games/BLOODMONEY!.html",
+    "image": "../assets/bloodmoney.png"
+  },
+  {
+    "title": "Doki Doki Literature Club",
+    "description": "Doki Doki Literature Club! starts as a cheerful high school dating sim but quickly turns into a psychological horror game. It breaks the fourth wall, using glitches and disturbing events to create a tense, unsettling story.",
+    "url": "../games/ddlc.html",
+    "image": "../assets/ddlc.jpg"
+  },
+  {
+    "title": "Doodle Jump",
+    "description": "Doodle Jump is a fast-paced vertical platformer where you guide a little four-legged creature called “The Doodler” up an endless series of platforms, shooting monsters and dodging hazards.",
+    "url": "../games/Doodle Jump.html",
+    "image": "../assets/doodlejump.png"
+  },
+  {
+    "title": "The Binding of Issac: Wrath of the Lamb",
+    "description": "The Binding of Isaac: Wrath of the Lamb is a dark, randomly generated roguelike shooter where a crying child battles grotesque monsters in a nightmarish basement inspired by biblical themes and psychological horror.",
+    "url": "../games/TBOIWOTL.html",
+    "image": "../assets/tboiwotl.png"
   }
 ]
