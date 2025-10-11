@@ -88,5 +88,11 @@
     "description": "Cookie Clicker is an incremental game where you bake cookies by clicking and buying upgrades, watching your cookie empire grow endlessly.",
     "url": "../games/Cookie Clicker.html",
     "image": "../assets/cookieclicker.png"
+  },
+  {
+    "title": "Osu!",
+    "description": "Osu! is a fast-paced rhythm game where you click, slide, and spin to the beat of songs with absurd precision and anime-level energy.",
+    "url": "../games/Osu!/sciencerules/game/osu!.html",
+    "image": "../assets/osu.png"
   }
 ]
