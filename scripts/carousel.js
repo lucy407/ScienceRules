@@ -6,7 +6,7 @@ async function loadGames() {
   try {
     const response = await fetch("scripts/games.json");
     games = await response.json();
-    games = games.sort(() => 0.5 - Math.random()).slice(0, 9);
+    games = games.sort(() => Math.random() - 0.5).slice(0, 9);
     renderCarousel();
     startAutoSlide();
   } catch (err) {
@@ -24,17 +24,21 @@ function renderCarousel() {
     slide.className = "carousel-slide";
     if (i === 0) slide.classList.add("active");
 
-    const gamesGroup = games.slice(i * 3, i * 3 + 3);
-    const gamesHTML = gamesGroup.map(game => `
-      <a href="../pages/games.html?game=${encodeURIComponent(game.id)}" class="carousel-link">
-        <div class="carousel-image-container">
-          <img src="${game.image}" alt="${game.title}">
-          <div class="carousel-title">${game.title}</div>
-        </div>
-      </a>
-    `).join("");
-
-    slide.innerHTML = `<div class="carousel-grid">${gamesHTML}</div>`;
+    const group = games.slice(i * 3, i * 3 + 3);
+    slide.innerHTML = `
+      ${group
+        .map(
+          g => `
+          <a href="../pages/games.html?game=${encodeURIComponent(g.id)}" class="carousel-link">
+            <div class="carousel-image-container">
+              <img src="${g.image}" alt="${g.title}">
+              <div class="carousel-title">${g.title}</div>
+            </div>
+          </a>
+        `
+        )
+        .join("")}
+    `;
     carousel.appendChild(slide);
   }
 }
@@ -46,12 +50,6 @@ function showSlide(index) {
   });
 }
 
-function prevSlide() {
-  const slides = document.querySelectorAll(".carousel-slide");
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-}
-
 function nextSlide() {
   const slides = document.querySelectorAll(".carousel-slide");
   currentIndex = (currentIndex + 1) % slides.length;
@@ -59,7 +57,7 @@ function nextSlide() {
 }
 
 function startAutoSlide() {
-  if (autoSlideInterval) clearInterval(autoSlideInterval);
+  clearInterval(autoSlideInterval);
   autoSlideInterval = setInterval(nextSlide, 5000);
 }
 
