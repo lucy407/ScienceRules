@@ -118,5 +118,12 @@
     "description": "The Binding of Isaac: Wrath of the Lamb is a dark, randomly generated roguelike shooter where a crying child battles grotesque monsters in a nightmarish basement inspired by biblical themes and psychological horror.",
     "url": "../games/TBOIWOTL.html",
     "image": "../assets/tboiwotl.png"
+  },
+  {
+  "title": "Phoenix Wright: Ace Attorney",
+  "description": "Step into the courtroom as Phoenix Wright and uncover the truth through logic, lies, and wild cross-examinations.",
+  "url": "../games/f.kbhgames.com/emujs/play.php",
+  "image": "../assets/aceattorney.png"
   }
+
 ]
