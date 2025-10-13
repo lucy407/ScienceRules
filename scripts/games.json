@@ -145,5 +145,181 @@
     "url": "../games/Class of 09.html",
     "image": "../assets/classof09.png",
     "category": "Visual Novel"
+  },
+  {
+    "title": "Friday Night Funkin vs Shaggy Mod",
+    "description": "Friday Night Funkin’ vs Shaggy is a rhythm game where you hit the right notes to rap and sing your way through quirky, challenging music battles. ",
+    "url": "../games/Friday Night Funkin vs Shaggy.html",
+    "image": "../assets/shaggy.png",
+    "category": "Rhythm"
+  },
+  {
+    "title": "Friday Night Funkin' Creepypasta Mod",
+    "description": "Friday Night Funkin’ Creepypasta is a rhythm game where you hit the right notes to rap and sing your way through quirky, challenging music battles. ",
+    "url": "../games/Friday Night Funkin'_ Creepypasta JP.html",
+    "image": "../assets/creepypasta.jpeg",
+    "category": "Rhythm"
+  },
+  {
+    "title": "Papa's Bakeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local bakeria!",
+    "url": "../games/Papa's Bakeria.html",
+    "image": "../assets/pbake.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Burgeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local burgeria!",
+    "url": "../games/Papa's Burgeria.html",
+    "image": "../assets/pburger.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Cheeseria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local cheeseria!",
+    "url": "../games/Papa's Cheeseria.html",
+    "image": "../assets/pcheese.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Cupcakeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local cupcakeria!",
+    "url": "../games/Papa's Cupcakeria.html",
+    "image": "../assets/pcupcake.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Donuteria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local donuteria!",
+    "url": "../games/Papa's Donuteria.html",
+    "image": "../assets/pdonut.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Freezeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local freezeria!",
+    "url": "../games/Papa's Freezeria.html",
+    "image": "../assets/pfreeze.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Hot Doggeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local doggeria!",
+    "url": "../games/Papa's Doggeria.html",
+    "image": "../assets/photdog.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Pancakeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local pancakeria!",
+    "url": "../games/Papa's Pancakeria.html",
+    "image": "../assets/ppancake.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Bakeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local bakeria!",
+    "url": "../games/Papa's Bakeria.html",
+    "image": "../assets/pbake.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Pastaria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local pastaria!",
+    "url": "../games/Papa's Pastaria.html",
+    "image": "../assets/ppasta.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Pizzaria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local pizzaria!",
+    "url": "../games/Papa's Pizaria.html",
+    "image": "../assets/ppizza.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Scooperia",
+    "description": "A popular nostalgic flash game. Play as the owner of a local scooperia!",
+    "url": "../games/Papa's Scooperia.html",
+    "image": "../assets/pscoop.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Sushiria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local sushiria!",
+    "url": "../games/Papa's Sushiria.html",
+    "image": "../assets/psushi.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Taco Mia",
+    "description": "A popular nostalgic flash game. Play as the owner of a local taco ima!",
+    "url": "../games/Papa's Taco Mia.html",
+    "image": "../assets/ptaco.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Papa's Wingeria",
+    "description": "A popular nostalgic flash game. Play as the owner of a local wingeria!",
+    "url": "../games/Papa's Wingeria.html",
+    "image": "../assets/pwing.png",
+    "category": "Simulation"
+  },
+  {
+    "title": "Lacey's Flash Games",
+    "description": "You are a user on a popular childrens site. You play minigames and play as a girl named Lacey! Discover the unsettiling messages hidden in games and parts of Lacey's website",
+    "url": "../games/Lacey's Flash Games.html",
+    "image": "../assets/lfg.png",
+    "category": "Horror"
+  },
+  {
+    "title": "Getting Over It with Bennett Foddy",
+    "description": "Use your axe to climb over obstacles! Get to the finish line.",
+    "url": "../games/Getting Over It with Bennett Foddy.html",
+    "image": "../assets/goiwbf.png",
+    "category": "Puzzle"
+  },
+  {
+    "title": "Plants vs Zombies",
+    "description": "Put down as many plants as possible to defend your farm from pesky zombies!",
+    "url": "../games/Plants vs Zombies.html",
+    "image": "../assets/pvz.png",
+    "category": "Action"
+  },
+  {
+    "title": "Pokemon Emerald",
+    "description": "Pokemon emulator for Pokemon Emerald edition",
+    "url": "../games/Pokemon Emerald.html",
+    "image": "../assets/pokeem.png",
+    "category": "Action"
+  },
+  {
+    "title": "Pokemon Red",
+    "description": "Pokemon emulator for Pokemon Red edition",
+    "url": "../games/Pokemon Emerald.html",
+    "image": "../assets/pokered.png",
+    "category": "Action"
+  },
+  {
+    "title": "Pou",
+    "description": "The player has to feed, dress and care for the creature, with the option of dressing it with several cosmetic items.",
+    "url": "../games/Pou.html",
+    "image": "../assets/pou.png",
+    "category": "Simulator"
+  },
+  {
+    "title": "Slender: The 8 Pages",
+    "description": "Play as a survivor of the infamous Slenderman, collect all 8 pages and escape the forest!",
+    "url": "../games/Slender_ The 8 Pages.html",
+    "image": "../assets/sep.png",
+    "category": "Horror"
+  },
+  {
+    "title": "Snowbattle.io",
+    "description": "You are a snowplower, You roll around on the ice to create a snowball, Throw it at others and dodge other players snowballs!",
+    "url": "../games/Snowbattle.io.html",
+    "image": "../assets/sbio.png",
+    "category": "Action"
   }
+  
 ]
