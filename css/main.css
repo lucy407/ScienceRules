@@ -48,3 +48,6 @@ header {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+@media screen and (max-width: 700px) {
+img {width: 200px}
+}
