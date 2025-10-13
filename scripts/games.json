@@ -290,13 +290,13 @@
     "title": "Pokemon Emerald",
     "description": "Pokemon emulator for Pokemon Emerald edition",
     "url": "../games/Pokemon Emerald.html",
-    "image": "../assets/pokeem.png",
+    "image": "../assets/pokeem'.png",
     "category": "Action"
   },
   {
     "title": "Pokemon Red",
     "description": "Pokemon emulator for Pokemon Red edition",
-    "url": "../games/Pokemon Emerald.html",
+    "url": "../games/Pokemon Red.html",
     "image": "../assets/pokered.png",
     "category": "Action"
   },
@@ -304,7 +304,7 @@
     "title": "Pou",
     "description": "The player has to feed, dress and care for the creature, with the option of dressing it with several cosmetic items.",
     "url": "../games/Pou.html",
-    "image": "../assets/pou.png",
+    "image": "../assets/pouwow.png",
     "category": "Simulator"
   },
   {
