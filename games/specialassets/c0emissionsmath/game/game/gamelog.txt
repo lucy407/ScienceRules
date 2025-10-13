@@ -1,0 +1,41 @@
+﻿--- Thu Aug  7 05:41:15 2025
+
+Kylar
+Hey so for the senior prank this year what if we like parked our cars where we
+don't usually park them!{p=5.630999999999999}{nw}
+
+Ari
+Oh my god that is so funny!{p=1.8350000000000009}{nw}
+
+Kylar
+Heh yeah math class this year with Mr. Burleday huh yeah like fuck Mr.
+Burleday dude ha ha ha ha!{p=6.213999999999999}{nw}
+
+Nicole
+God they are never funny. It's like the girls just laugh to avoid sexual
+assault.{p=4.922000000000001}{nw}
+
+Crispin
+Hey yo you new to this educational prison?{p=2.461000000000002}{nw}
+
+Nicole
+Ha ha ha ha ha wow yeah that was funny.{p=2.5440000000000005}{nw}
+
+Crispin
+Yeah I'm getting into like humor and stuff-- anyway you know anyone around
+here? Know where your classes are?{p=5.755999999999997}{nw}
+
+Nicole
+I mean kinda, there's like numbers on the doors I think I can figure it
+out.{p=4.110000000000003}{nw}
+
+Crispin
+No no no no no I could show you around. Like a school tour? You wanna do that?
+You up for that?{p=5.857999999999997}{nw}
+
+Choice: HUMOR THE SCHOOL TOUR
+Choice: DECLINE AND GO STRAIGHT TO CLASS
+Choice: TELL HIM OFF AND CUT CLASS
+
+--- Thu Aug  7 05:42:07 2025
+

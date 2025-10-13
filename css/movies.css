@@ -107,21 +107,25 @@ nav a:hover {
 
 
 .filters button {
-  padding: 10px 16px;
-  font-size: 1em;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05em;
+  padding: 10px 18px;
   border-radius: 10px;
-  border: none;
-  background: #5ac8fa;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 10px 5px;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  background: #16171b;
+  border-style: solid;
+  border-color: rgb(43, 43, 43);
+  margin: 5px;
 }
 .filters button.active,
 .filters button:hover {
-  background: #49b7d6;
   transform: scale(1.05);
+  background: #5ac8fa33;
+  color: #5ac8fa;
+  box-shadow: 0 0 12px #5ac7fa34;
+  border-color: #5ac8fa;
 }
 
 #movie-list {
@@ -196,17 +200,23 @@ nav a:hover {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+
 .links a {
-  padding: 6px 12px;
-  background: #5ac8fa;
-  color: #000;
-  border-radius: 8px;
-  font-weight: bold;
+  color: #e0e0e0;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05em;
+  padding: 10px 18px;
+  border-radius: 10px;
   transition: all 0.3s ease;
+  background: #16171b;
+  border-style: solid;
+  border-color: rgb(43, 43, 43);
+  margin: 5px;
 }
 .links a:hover {
   background: #49b7d6;
+  border-color: #317c91;
 }
 
 @media(max-width:700px){

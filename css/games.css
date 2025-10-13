@@ -1,33 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #0f1115, #1a1c22);
-  color: #e0e0e0;
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-header {
-  width: 100%;
-  padding: 50px 20px;
-  background: rgba(20,20,25,0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  border-bottom: 1px solid #222;
-}
-
 h1 {
   font-size: 2.8em;
   color: #5ac8fa;
@@ -116,7 +86,7 @@ nav a:hover {
   margin: 0 auto 60px;
 }
 
-#game-search {
+#game-search, #sort-dropdown {
   padding: 10px 14px;
   font-size: 1em;
   border-radius: 10px;
@@ -127,6 +97,11 @@ nav a:hover {
   margin: 20px 10px 20px 0;
   transition: border 0.3s, box-shadow 0.3s;
 }
+
+#sort-dropdown {
+  padding: 8px;
+}
+
 #game-search:focus {
   border-color: #5ac8fa;
   box-shadow: 0 0 8px #5ac8fa55;
@@ -247,3 +222,4 @@ nav a:hover {
   .welcome-section p{font-size:1.1em;}
   #game-list{gap:14px;}
 }
+

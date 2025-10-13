@@ -44,7 +44,7 @@ loaderOverlay.id = 'loader-overlay';
 loaderOverlay.innerHTML = `
   <div class="loader-container">
     <img src="../assets/atom.png" alt="Loading..." class="loader-logo">
-    <p style="color: #00eaff; font-family: sans-serif;">Loading...</p>
+    <p style="color: #00eaff; font-family: 'Montserrat'; font-weight: bold;">Loading...</p>
   </div>
 `;
 document.body.appendChild(loaderOverlay);

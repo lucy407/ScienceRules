@@ -1,32 +1,69 @@
 let allGames = [];
+let allCategories = new Set();
 
 fetch('../scripts/games.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok ' + response.statusText);
-    }
-    return response.json();
+  .then(res => {
+    if (!res.ok) throw new Error('Failed to load games.json');
+    return res.json();
   })
   .then(games => {
     allGames = games;
+    games.forEach(g => { if (g.category) allCategories.add(g.category); });
+    setupSortDropdown();
     displayGames(allGames);
   })
-  .catch(error => console.error('Error loading games:', error));
+  .catch(err => console.error('Error loading games:', err));
+
+function setupSortDropdown() {
+  const dropdown = document.getElementById('sort-dropdown');
+  dropdown.innerHTML = '';
+
+  const baseOptions = ['A-Z', 'Newest', 'Oldest'];
+  baseOptions.forEach(opt => {
+    const option = document.createElement('option');
+    option.value = opt;
+    option.textContent = opt;
+    dropdown.appendChild(option);
+  });
+
+  allCategories.forEach(category => {
+    const option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    dropdown.appendChild(option);
+  });
+
+  dropdown.value = 'A-Z';
+  dropdown.addEventListener('change', handleSortChange);
+}
+
+function handleSortChange(e) {
+  const sortType = e.target.value;
+  let sorted = [...allGames];
+
+  if (sortType === 'A-Z') {
+    sorted.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sortType === 'Newest') {
+    sorted = sorted.reverse();
+  } else if (sortType === 'Oldest') {
+  } else {
+    sorted = allGames.filter(g => g.category === sortType);
+  }
+
+  displayGames(sorted);
+}
 
 function displayGames(games) {
   const gameCountElem = document.getElementById('game-count');
-  if (gameCountElem) {
-    gameCountElem.textContent = `Games Found: ${games.length}`;
-  }
+  gameCountElem.textContent = `${games.length}`;
 
   const gameList = document.getElementById('game-list');
   gameList.innerHTML = '';
 
   games.forEach(game => {
-    const gameCard = document.createElement('div');
-    gameCard.className = 'game-card';
-
-    gameCard.innerHTML = `
+    const card = document.createElement('div');
+    card.className = 'game-card';
+    card.innerHTML = `
       <img src="${game.image}" alt="${game.title}" class="game-image" />
       <h3>${game.title}</h3>
       <p>${game.description}</p>
@@ -35,42 +72,30 @@ function displayGames(games) {
         <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="external-link">Open in New Tab</a>
       </div>
     `;
+    gameList.appendChild(card);
 
-    gameList.appendChild(gameCard);
-
-    const playButton = gameCard.querySelector('.play-inside-btn');
-    playButton.addEventListener('click', () => {
+    card.querySelector('.play-inside-btn').addEventListener('click', () => {
       openGameInIframe(game.url, game.title);
     });
   });
 }
 
-
 const searchInput = document.getElementById('game-search');
 if (searchInput) {
-  searchInput.addEventListener('input', (e) => {
+  searchInput.addEventListener('input', e => {
     const query = e.target.value.toLowerCase();
-    const filteredGames = allGames.filter(game => game.title.toLowerCase().includes(query));
-    displayGames(filteredGames);
-  });
-}
-
-
-const sortBtn = document.getElementById('sort-alpha-btn');
-if (sortBtn) {
-  sortBtn.addEventListener('click', () => {
-    const sortedGames = [...allGames].sort((a, b) => a.title.localeCompare(b.title));
-    displayGames(sortedGames);
+    const filtered = allGames.filter(g => g.title.toLowerCase().includes(query));
+    displayGames(filtered);
   });
 }
 
 function openGameInIframe(url, title) {
-  let existingFrame = document.getElementById('game-iframe-container');
-  if (existingFrame) existingFrame.remove();
+  let frameContainer = document.getElementById('game-iframe-container');
+  if (frameContainer) frameContainer.remove();
 
-  const container = document.createElement('div');
-  container.id = 'game-iframe-container';
-  container.innerHTML = `
+  frameContainer = document.createElement('div');
+  frameContainer.id = 'game-iframe-container';
+  frameContainer.innerHTML = `
     <div class="iframe-header">
       <span>${title}</span>
       <button id="close-iframe-btn">✖</button>
@@ -78,9 +103,6 @@ function openGameInIframe(url, title) {
     <iframe src="${url}" allowfullscreen></iframe>
   `;
 
-  document.body.appendChild(container);
-
-  document.getElementById('close-iframe-btn').onclick = () => {
-    container.remove();
-  };
+  document.body.appendChild(frameContainer);
+  document.getElementById('close-iframe-btn').onclick = () => frameContainer.remove();
 }

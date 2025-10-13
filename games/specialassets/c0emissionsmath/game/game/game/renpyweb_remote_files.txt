@@ -1,0 +1,1224 @@
+0039end.webm
+video -
+0063end.webm
+video -
+0074end.webm
+video -
+0091end.webm
+video -
+0103end.webm
+video -
+0105end.webm
+video -
+0121end.webm
+video -
+0126end.webm
+video -
+0127end.webm
+video -
+0144end.webm
+video -
+0145end.webm
+video -
+0153end.webm
+video -
+0161end.webm
+video -
+0169end.webm
+video -
+0173end.webm
+video -
+NewMessageSequence/NewMessage_0001.png
+image 1920,1080
+NewMessageSequence/NewMessage_0002.png
+image 1920,1080
+NewMessageSequence/NewMessage_0003.png
+image 1920,1080
+NewMessageSequence/NewMessage_0004.png
+image 1920,1080
+NewMessageSequence/NewMessage_0005.png
+image 1920,1080
+NewMessageSequence/NewMessage_0006.png
+image 1920,1080
+NewMessageSequence/NewMessage_0007.png
+image 1920,1080
+NewMessageSequence/NewMessage_0008.png
+image 1920,1080
+NewMessageSequence/NewMessage_0009.png
+image 1920,1080
+NewMessageSequence/NewMessage_0010.png
+image 1920,1080
+NewMessageSequence/NewMessage_0011.png
+image 1920,1080
+NewMessageSequence/NewMessage_0012.png
+image 1920,1080
+NewMessageSequence/NewMessage_0013.png
+image 1920,1080
+NewMessageSequence/NewMessage_0014.png
+image 1920,1080
+NewMessageSequence/NewMessage_0015.png
+image 1920,1080
+NewMessageSequence/NewMessage_0016.png
+image 1920,1080
+NewMessageSequence/NewMessage_0017.png
+image 1920,1080
+NewMessageSequence/NewMessage_0018.png
+image 1920,1080
+NewMessageSequence/NewMessage_0019.png
+image 1920,1080
+NewMessageSequence/NewMessage_0020.png
+image 1920,1080
+NewMessageSequence/NewMessage_0021.png
+image 1920,1080
+NewMessageSequence/NewMessage_0022.png
+image 1920,1080
+NewMessageSequence/NewMessage_0023.png
+image 1920,1080
+NewMessageSequence/NewMessage_0024.png
+image 1920,1080
+NewMessageSequence/NewMessage_0025.png
+image 1920,1080
+NewMessageSequence/NewMessage_0026.png
+image 1920,1080
+NewMessageSequence/NewMessage_0027.png
+image 1920,1080
+NewMessageSequence/NewMessage_0028.png
+image 1920,1080
+NewMessageSequence/NewMessage_0029.png
+image 1920,1080
+NewMessageSequence/NewMessage_0030.png
+image 1920,1080
+NewMessageSequence/NewMessage_0031.png
+image 1920,1080
+NewMessageSequence/NewMessage_0032.png
+image 1920,1080
+NewMessageSequence/NewMessage_0033.png
+image 1920,1080
+NewMessageSequence/NewMessage_0034.png
+image 1920,1080
+NewMessageSequence/NewMessage_0035.png
+image 1920,1080
+NewMessageSequence/NewMessage_0036.png
+image 1920,1080
+NewMessageSequence/NewMessage_0037.png
+image 1920,1080
+NewMessageSequence/NewMessage_0038.png
+image 1920,1080
+NewMessageSequence/NewMessage_0039.png
+image 1920,1080
+NewMessageSequence/NewMessage_0040.png
+image 1920,1080
+NewMessageSequence/NewMessage_0041.png
+image 1920,1080
+NewMessageSequence/NewMessage_0042.png
+image 1920,1080
+NewMessageSequence/NewMessage_0043.png
+image 1920,1080
+NewMessageSequence/NewMessage_0044.png
+image 1920,1080
+NewMessageSequence/NewMessage_0045.png
+image 1920,1080
+NewMessageSequence/NewMessage_0046.png
+image 1920,1080
+NewMessageSequence/NewMessage_0047.png
+image 1920,1080
+NewMessageSequence/NewMessage_0048.png
+image 1920,1080
+NewMessageSequence/NewMessage_0049.png
+image 1920,1080
+NewMessageSequence/NewMessage_0050.png
+image 1920,1080
+NewMessageSequence/NewMessage_0051.png
+image 1920,1080
+NewMessageSequence/NewMessage_0052.png
+image 1920,1080
+NewMessageSequence/NewMessage_0053.png
+image 1920,1080
+NewMessageSequence/NewMessage_0054.png
+image 1920,1080
+NewMessageSequence/NewMessage_0055.png
+image 1920,1080
+NewMessageSequence/NewMessage_0056.png
+image 1920,1080
+NewMessageSequence/NewMessage_0057.png
+image 1920,1080
+NewMessageSequence/NewMessage_0058.png
+image 1920,1080
+NewMessageSequence/NewMessage_0059.png
+image 1920,1080
+audio/Ambience/Bar_Ambience.mp3
+music -
+audio/Ambience/Bar_NoMusic_Ambience.mp3
+music -
+audio/Ambience/Barcade_Ambience.mp3
+music -
+audio/Ambience/Barcade_NoMusic_Ambience.mp3
+music -
+audio/Ambience/Bathroom_Lockerroom_Ambience.mp3
+music -
+audio/Ambience/Cafeteria_Ambience.mp3
+music -
+audio/Ambience/Classroom_Ambience.mp3
+music -
+audio/Ambience/Courtroom_Ambience.mp3
+music -
+audio/Ambience/Darkroom_Ambience.mp3
+music -
+audio/Ambience/Diner_Ambience.mp3
+music -
+audio/Ambience/Exterior_Ambience.mp3
+music -
+audio/Ambience/Gym_Ambience.mp3
+music -
+audio/Ambience/Gym_Ceremony_Ambience.mp3
+music -
+audio/Ambience/Hallway_Ambience.mp3
+music -
+audio/Ambience/House_Ambience.mp3
+music -
+audio/Ambience/House_Ambience_2.mp3
+music -
+audio/Ambience/House_Night_Ambience.mp3
+music -
+audio/Ambience/Mall_Ambience.mp3
+music -
+audio/Ambience/Neighborhood_Ambience_Night.mp3
+music -
+audio/Ambience/Office_Ambience.mp3
+music -
+audio/Ambience/School_Ext_Ambience.mp3
+music -
+audio/Ambience/Venue_Ambience.mp3
+music -
+audio/Ambience/WheatField_Ambience.mp3
+music -
+audio/MainMenuPress.mp3
+music -
+audio/MainMenuRollover.mp3
+music -
+audio/NewTextAlert.mp3
+music -
+audio/PhoneSelect.mp3
+music -
+audio/Phone_button.mp3
+music -
+audio/Phone_close.mp3
+music -
+audio/Phone_slide.mp3
+music -
+audio/Scenes/0002.mp3
+music -
+audio/Scenes/0003.mp3
+music -
+audio/Scenes/0004.mp3
+music -
+audio/Scenes/0005.mp3
+music -
+audio/Scenes/0006.mp3
+music -
+audio/Scenes/0007.mp3
+music -
+audio/Scenes/0008.mp3
+music -
+audio/Scenes/0009.mp3
+music -
+audio/Scenes/0010.mp3
+music -
+audio/Scenes/0011.mp3
+music -
+audio/Scenes/0012.mp3
+music -
+audio/Scenes/0013.mp3
+music -
+audio/Scenes/0014.mp3
+music -
+audio/Scenes/0015.mp3
+music -
+audio/Scenes/0016.mp3
+music -
+audio/Scenes/0017.mp3
+music -
+audio/Scenes/0018.mp3
+music -
+audio/Scenes/0019.mp3
+music -
+audio/Scenes/0020.mp3
+music -
+audio/Scenes/0021.mp3
+music -
+audio/Scenes/0022.mp3
+music -
+audio/Scenes/0023.mp3
+music -
+audio/Scenes/0024.mp3
+music -
+audio/Scenes/0025.mp3
+music -
+audio/Scenes/0026.mp3
+music -
+audio/Scenes/0027.mp3
+music -
+audio/Scenes/0028.mp3
+music -
+audio/Scenes/0029.mp3
+music -
+audio/Scenes/0030.mp3
+music -
+audio/Scenes/0031.mp3
+music -
+audio/Scenes/0032.mp3
+music -
+audio/Scenes/0033.mp3
+music -
+audio/Scenes/0034.mp3
+music -
+audio/Scenes/0035.mp3
+music -
+audio/Scenes/0036.mp3
+music -
+audio/Scenes/0037.mp3
+music -
+audio/Scenes/0038.mp3
+music -
+audio/Scenes/0039.mp3
+music -
+audio/Scenes/0040.mp3
+music -
+audio/Scenes/0041.mp3
+music -
+audio/Scenes/0042.mp3
+music -
+audio/Scenes/0043.mp3
+music -
+audio/Scenes/0044.mp3
+music -
+audio/Scenes/0045.mp3
+music -
+audio/Scenes/0046.mp3
+music -
+audio/Scenes/0047.mp3
+music -
+audio/Scenes/0048.mp3
+music -
+audio/Scenes/0049.mp3
+music -
+audio/Scenes/0050.mp3
+music -
+audio/Scenes/0051.mp3
+music -
+audio/Scenes/0052.mp3
+music -
+audio/Scenes/0053.mp3
+music -
+audio/Scenes/0054.mp3
+music -
+audio/Scenes/0055.mp3
+music -
+audio/Scenes/0056.mp3
+music -
+audio/Scenes/0057.mp3
+music -
+audio/Scenes/0058.mp3
+music -
+audio/Scenes/0059.mp3
+music -
+audio/Scenes/0060.mp3
+music -
+audio/Scenes/0061.mp3
+music -
+audio/Scenes/0062.mp3
+music -
+audio/Scenes/0063.mp3
+music -
+audio/Scenes/0064.mp3
+music -
+audio/Scenes/0065.mp3
+music -
+audio/Scenes/0066.mp3
+music -
+audio/Scenes/0067.mp3
+music -
+audio/Scenes/0068.mp3
+music -
+audio/Scenes/0069.mp3
+music -
+audio/Scenes/0070.mp3
+music -
+audio/Scenes/0071.mp3
+music -
+audio/Scenes/0072.mp3
+music -
+audio/Scenes/0073.mp3
+music -
+audio/Scenes/0074.mp3
+music -
+audio/Scenes/0075.mp3
+music -
+audio/Scenes/0076.mp3
+music -
+audio/Scenes/0077.mp3
+music -
+audio/Scenes/0078.mp3
+music -
+audio/Scenes/0079.mp3
+music -
+audio/Scenes/0080.mp3
+music -
+audio/Scenes/0081.mp3
+music -
+audio/Scenes/0082.mp3
+music -
+audio/Scenes/0083.mp3
+music -
+audio/Scenes/0084.mp3
+music -
+audio/Scenes/0085.mp3
+music -
+audio/Scenes/0086.mp3
+music -
+audio/Scenes/0087.mp3
+music -
+audio/Scenes/0088.mp3
+music -
+audio/Scenes/0089.mp3
+music -
+audio/Scenes/0090.mp3
+music -
+audio/Scenes/0091.mp3
+music -
+audio/Scenes/0092.mp3
+music -
+audio/Scenes/0093.mp3
+music -
+audio/Scenes/0094.mp3
+music -
+audio/Scenes/0095.mp3
+music -
+audio/Scenes/0096.mp3
+music -
+audio/Scenes/0097.mp3
+music -
+audio/Scenes/0098.mp3
+music -
+audio/Scenes/0100.mp3
+music -
+audio/Scenes/0101.mp3
+music -
+audio/Scenes/0102.mp3
+music -
+audio/Scenes/0103.mp3
+music -
+audio/Scenes/0104.mp3
+music -
+audio/Scenes/0104b.mp3
+music -
+audio/Scenes/0105.mp3
+music -
+audio/Scenes/0106.mp3
+music -
+audio/Scenes/0107.mp3
+music -
+audio/Scenes/0108.mp3
+music -
+audio/Scenes/0109.mp3
+music -
+audio/Scenes/0110.mp3
+music -
+audio/Scenes/0111.mp3
+music -
+audio/Scenes/0112.mp3
+music -
+audio/Scenes/0113.mp3
+music -
+audio/Scenes/0114.mp3
+music -
+audio/Scenes/0115.mp3
+music -
+audio/Scenes/0116.mp3
+music -
+audio/Scenes/0117.mp3
+music -
+audio/Scenes/0118.mp3
+music -
+audio/Scenes/0119.mp3
+music -
+audio/Scenes/0120.mp3
+music -
+audio/Scenes/0121.mp3
+music -
+audio/Scenes/0122.mp3
+music -
+audio/Scenes/0123.mp3
+music -
+audio/Scenes/0124.mp3
+music -
+audio/Scenes/0125.mp3
+music -
+audio/Scenes/0126.mp3
+music -
+audio/Scenes/0127.mp3
+music -
+audio/Scenes/0128.mp3
+music -
+audio/Scenes/0129.mp3
+music -
+audio/Scenes/0130.mp3
+music -
+audio/Scenes/0131.mp3
+music -
+audio/Scenes/0132.mp3
+music -
+audio/Scenes/0133.mp3
+music -
+audio/Scenes/0134.mp3
+music -
+audio/Scenes/0135.mp3
+music -
+audio/Scenes/0136.mp3
+music -
+audio/Scenes/0137.mp3
+music -
+audio/Scenes/0138.mp3
+music -
+audio/Scenes/0139.mp3
+music -
+audio/Scenes/0140.mp3
+music -
+audio/Scenes/0141.mp3
+music -
+audio/Scenes/0142.mp3
+music -
+audio/Scenes/0143.mp3
+music -
+audio/Scenes/0144.mp3
+music -
+audio/Scenes/0145.mp3
+music -
+audio/Scenes/0146.mp3
+music -
+audio/Scenes/0147.mp3
+music -
+audio/Scenes/0148.mp3
+music -
+audio/Scenes/0149.mp3
+music -
+audio/Scenes/0150.mp3
+music -
+audio/Scenes/0151.mp3
+music -
+audio/Scenes/0152.mp3
+music -
+audio/Scenes/0153.mp3
+music -
+audio/Scenes/0154.mp3
+music -
+audio/Scenes/0155.mp3
+music -
+audio/Scenes/0156.mp3
+music -
+audio/Scenes/0157.mp3
+music -
+audio/Scenes/0158.mp3
+music -
+audio/Scenes/0159.mp3
+music -
+audio/Scenes/0160.mp3
+music -
+audio/Scenes/0161.mp3
+music -
+audio/Scenes/0162.mp3
+music -
+audio/Scenes/0163.mp3
+music -
+audio/Scenes/0164.mp3
+music -
+audio/Scenes/0165.mp3
+music -
+audio/Scenes/0166.mp3
+music -
+audio/Scenes/0167.mp3
+music -
+audio/Scenes/0168.mp3
+music -
+audio/Scenes/0169.mp3
+music -
+audio/Scenes/0170.mp3
+music -
+audio/Scenes/0171.mp3
+music -
+audio/Scenes/0172.mp3
+music -
+audio/Scenes/0173.mp3
+music -
+audio/Scenes/0999.mp3
+music -
+audio/menu_piano.mp3
+music -
+images/ABOUT.png
+image 1920,1080
+images/ABOUT_mask.png
+image 1920,1080
+images/ABOUT_selected.png
+image 1920,1080
+images/CONTINUE.png
+image 1920,1080
+images/CONTINUE_mask.png
+image 1920,1080
+images/CONTINUE_selected.png
+image 1920,1080
+images/Cafeteria int 2.jpg
+image 1920,1080
+images/Cafeteria int.jpg
+image 1920,1080
+images/EXIT.png
+image 1920,1080
+images/EXIT_mask.png
+image 1920,1080
+images/EXIT_selected.png
+image 1920,1080
+images/NEWGAME.png
+image 1920,1080
+images/NEWGAME_mask.png
+image 1920,1080
+images/NEWGAME_selected.png
+image 1920,1080
+images/OPTIONS.png
+image 1920,1080
+images/OPTIONS_mask.png
+image 1920,1080
+images/OPTIONS_selected.png
+image 1920,1080
+images/Pills capless.png
+image 2000,2000
+images/Pills full.png
+image 125,125
+images/aaa.png
+image 854,117
+images/ball.png
+image 400,1080
+images/barcade ext.jpg
+image 3840,2160
+images/barcade int.jpg
+image 1920,1080
+images/bathroom.jpg
+image 1920,1080
+images/bedroom nicole.jpg
+image 1920,1080
+images/blank.png
+image 128,128
+images/camera.png
+image 518,1080
+images/classroom int 1.jpg
+image 1920,1080
+images/classroom int 2.jpg
+image 1920,1080
+images/classroom int 3.jpg
+image 1920,1080
+images/coach 2.png
+image 598,1080
+images/coach 3 drunk angry.png
+image 598,1080
+images/coach 3 drunk smile.png
+image 598,1080
+images/coach 3.png
+image 598,1080
+images/coach furious.png
+image 598,1080
+images/coach smile.png
+image 598,1080
+images/coach worried.png
+image 598,1080
+images/coach.png
+image 598,1080
+images/concert ext.png
+image 3840,2160
+images/concert.jpg
+image 1920,1080
+images/cop.png
+image 598,1080
+images/couns 2 furious.png
+image 598,1080
+images/couns 2 smile.png
+image 598,1080
+images/couns 2.png
+image 598,1080
+images/couns 3 smile.png
+image 598,1080
+images/couns 3.png
+image 598,1080
+images/couns smile.png
+image 598,1080
+images/couns.png
+image 598,1080
+images/courtroom.png
+image 1920,1080
+images/crispin sc2 unhappy.png
+image 598,1080
+images/crispin sc2.png
+image 598,1080
+images/crispin sc3 unhappy.png
+image 598,1080
+images/crispin sc3.png
+image 598,1080
+images/crispin sc4 unhappy.png
+image 598,1080
+images/crispin sc4.png
+image 598,1080
+images/crispin sc5 unhappy.png
+image 598,1080
+images/crispin sc5.png
+image 598,1080
+images/crispin unhappy.png
+image 598,1080
+images/crispin white unhappy.png
+image 598,1080
+images/crispin white.png
+image 598,1080
+images/crispin.png
+image 598,1080
+images/dark room.jpg
+image 1920,1080
+images/demo end.png
+image 1920,1080
+images/diner ext.jpg
+image 3840,2160
+images/diner int.jpg
+image 1920,1080
+images/drawer.png
+image 1920,1080
+images/emt.png
+image 598,1080
+images/flash.png
+image 1920,1080
+images/gamer_brother upset.png
+image 598,1080
+images/gamer_brother.png
+image 598,1080
+images/girl_1 color2.png
+image 598,1080
+images/girl_1 gym.png
+image 598,1080
+images/girl_1.png
+image 598,1080
+images/girl_2 color2 unhappy.png
+image 598,1080
+images/girl_2 color2.png
+image 598,1080
+images/girl_2 color3 unhappy.png
+image 598,1080
+images/girl_2 color3.png
+image 598,1080
+images/girl_2 unhappy.png
+image 598,1080
+images/girl_2.png
+image 598,1080
+images/girl_3 laugh.png
+image 598,1080
+images/girl_3 shock.png
+image 598,1080
+images/girl_3 smile.png
+image 598,1080
+images/girl_3.png
+image 598,1080
+images/girl_4 color2.png
+image 598,1080
+images/girl_4.png
+image 598,1080
+images/girl_5 color2.png
+image 598,1080
+images/girl_5 gym.png
+image 598,1080
+images/girl_5.png
+image 598,1080
+images/guy_1.png
+image 598,1080
+images/guy_2 angry.png
+image 598,1080
+images/guy_2 color2 angry.png
+image 598,1080
+images/guy_2 color2 scared.png
+image 598,1080
+images/guy_2 color2 smirk.png
+image 598,1080
+images/guy_2 color2.png
+image 598,1080
+images/guy_2 scared.png
+image 598,1080
+images/guy_2 smirk.png
+image 598,1080
+images/guy_2.png
+image 598,1080
+images/guy_3 angry.png
+image 598,1080
+images/guy_3 color2 angry.png
+image 598,1080
+images/guy_3 color2.png
+image 598,1080
+images/guy_3 smile.png
+image 598,1080
+images/guy_3.png
+image 598,1080
+images/guy_4 gym.png
+image 598,1080
+images/guy_4 smile.png
+image 598,1080
+images/guy_4.png
+image 598,1080
+images/gym 1.jpg
+image 1920,1080
+images/gym 2.jpg
+image 1920,1080
+images/gym 3.jpg
+image 1920,1080
+images/gym 4.jpg
+image 1920,1080
+images/home kylar.jpg
+image 1920,1080
+images/home nicole ext day.jpg
+image 2560,1440
+images/home nicole ext night.jpg
+image 3840,2160
+images/home nicole int big.jpg
+image 3840,2160
+images/home nicole int.jpg
+image 1920,1080
+images/house kylar night.jpg
+image 3840,2160
+images/jecka designer.png
+image 598,1080
+images/jecka pj angry.png
+image 598,1080
+images/jecka pj unhappy.png
+image 598,1080
+images/jecka pj.png
+image 598,1080
+images/jecka sc2 unhappy.png
+image 598,1080
+images/jecka sc2 worried.png
+image 598,1080
+images/jecka sc2.png
+image 598,1080
+images/jecka sc3 angry.png
+image 598,1080
+images/jecka sc3 mean.png
+image 598,1080
+images/jecka sc3 surprised.png
+image 598,1080
+images/jecka sc3 unhappy.png
+image 598,1080
+images/jecka sc3 worried.png
+image 598,1080
+images/jecka sc3.png
+image 598,1080
+images/jecka sc4 angry.png
+image 598,1080
+images/jecka sc4 surprised.png
+image 598,1080
+images/jecka sc4 unhappy.png
+image 598,1080
+images/jecka sc4.png
+image 598,1080
+images/jecka sc5 angry.png
+image 598,1080
+images/jecka sc5 unhappy.png
+image 598,1080
+images/jecka sc5.png
+image 598,1080
+images/jecka sc6 angry.png
+image 598,1080
+images/jecka sc6 surprised.png
+image 598,1080
+images/jecka sc6 unhappy.png
+image 598,1080
+images/jecka sc6.png
+image 598,1080
+images/jecka sc7 angry.png
+image 598,1080
+images/jecka sc7 unhappy.png
+image 598,1080
+images/jecka sc7.png
+image 598,1080
+images/jecka unhappy.png
+image 598,1080
+images/jecka white angry.png
+image 598,1080
+images/jecka white unhappy.png
+image 598,1080
+images/jecka white.png
+image 598,1080
+images/jecka.png
+image 598,1080
+images/jeffery angry.png
+image 598,1080
+images/jeffery black emb.png
+image 598,1080
+images/jeffery black.png
+image 598,1080
+images/jeffery blush.png
+image 598,1080
+images/jeffery broken.png
+image 598,1080
+images/jeffery camera.png
+image 598,1080
+images/jeffery grad angry.png
+image 598,1080
+images/jeffery grad.png
+image 598,1080
+images/jeffery happy.png
+image 598,1080
+images/jeffery sc2 angry.png
+image 598,1080
+images/jeffery sc2 blush.png
+image 598,1080
+images/jeffery sc2 happy.png
+image 598,1080
+images/jeffery sc2.png
+image 598,1080
+images/jeffery sc3 emb.png
+image 598,1080
+images/jeffery sc3 happy.png
+image 598,1080
+images/jeffery sc3 pervy.png
+image 598,1080
+images/jeffery sc3.png
+image 598,1080
+images/jeffery sc4 angry.png
+image 598,1080
+images/jeffery sc4.png
+image 598,1080
+images/jeffery white blush.png
+image 598,1080
+images/jeffery white happy.png
+image 598,1080
+images/jeffery white.png
+image 598,1080
+images/jeffery.png
+image 598,1080
+images/jeffrey sc2.png
+image 598,1080
+images/keys.png
+image 66,89
+images/kylar fall.png
+image 585,986
+images/kylar gym angry.png
+image 598,1080
+images/kylar gym furious.png
+image 598,1080
+images/kylar gym unhappy.png
+image 598,1080
+images/kylar gym.png
+image 598,1080
+images/kylar sc2 sad.png
+image 598,1080
+images/kylar sc2 unhappy.png
+image 598,1080
+images/kylar sc2.png
+image 598,1080
+images/kylar sc3 unhappy.png
+image 598,1080
+images/kylar sc3.png
+image 598,1080
+images/kylar sc4.png
+image 598,1080
+images/kylar sc5 angry.png
+image 598,1080
+images/kylar sc5 furious.png
+image 598,1080
+images/kylar sc5.png
+image 598,1080
+images/kylar stretch.png
+image 1427,1080
+images/kylar unhappy.png
+image 598,1080
+images/kylar.png
+image 598,1080
+images/lawyer angry.png
+image 598,1080
+images/lawyer.png
+image 598,1080
+images/locker room.jpg
+image 1920,1080
+images/lynn shirt.png
+image 598,1080
+images/lynn.png
+image 598,1080
+images/mall int.jpg
+image 1920,1080
+images/mom 2 angry.png
+image 598,1080
+images/mom 2 concerned.png
+image 598,1080
+images/mom 2 sad.png
+image 598,1080
+images/mom 2.png
+image 598,1080
+images/mom 3 angry.png
+image 598,1080
+images/mom 3.png
+image 598,1080
+images/mom 4 concerned.png
+image 598,1080
+images/mom 4 sad.png
+image 598,1080
+images/mom 4 smile.png
+image 598,1080
+images/mom 4.png
+image 598,1080
+images/mom 5 angry.png
+image 598,1080
+images/mom 5 concerned.png
+image 598,1080
+images/mom 5 smile.png
+image 598,1080
+images/mom 5.png
+image 598,1080
+images/mom angry.png
+image 598,1080
+images/mom.png
+image 598,1080
+images/mr_white.png
+image 598,1080
+images/nicole angry.png
+image 598,1080
+images/nicole athome2 sly.png
+image 598,1080
+images/nicole athome2 surprised.png
+image 598,1080
+images/nicole athome2.png
+image 598,1080
+images/nicole athome3 angry.png
+image 598,1080
+images/nicole athome3 smile.png
+image 598,1080
+images/nicole athome3.png
+image 598,1080
+images/nicole changing angry.png
+image 598,1080
+images/nicole changing flirt.png
+image 598,1080
+images/nicole changing scream.png
+image 598,1080
+images/nicole changing sly.png
+image 598,1080
+images/nicole changing surprised.png
+image 598,1080
+images/nicole changing.png
+image 598,1080
+images/nicole court sad.png
+image 598,1080
+images/nicole court scream.png
+image 598,1080
+images/nicole court.png
+image 598,1080
+images/nicole designer.png
+image 598,1080
+images/nicole grad.png
+image 598,1080
+images/nicole gym sad.png
+image 598,1080
+images/nicole gym scream.png
+image 598,1080
+images/nicole gym.png
+image 598,1080
+images/nicole pj angry.png
+image 598,1080
+images/nicole pj gloves scared.png
+image 598,1080
+images/nicole pj gloves.png
+image 598,1080
+images/nicole pj surprised.png
+image 598,1080
+images/nicole pj.png
+image 598,1080
+images/nicole sc10 smile.png
+image 598,1080
+images/nicole sc10 surprised.png
+image 598,1080
+images/nicole sc10.png
+image 598,1080
+images/nicole sc2 flirt.png
+image 598,1080
+images/nicole sc2 scream.png
+image 598,1080
+images/nicole sc2 sly.png
+image 598,1080
+images/nicole sc2 smile.png
+image 598,1080
+images/nicole sc2 surprised.png
+image 598,1080
+images/nicole sc2.png
+image 598,1080
+images/nicole sc3 flirt.png
+image 598,1080
+images/nicole sc3 scream.png
+image 598,1080
+images/nicole sc3 sly.png
+image 598,1080
+images/nicole sc3 smile.png
+image 598,1080
+images/nicole sc3 surprised.png
+image 598,1080
+images/nicole sc3.png
+image 598,1080
+images/nicole sc4 mean.png
+image 598,1080
+images/nicole sc4 sly.png
+image 598,1080
+images/nicole sc4.png
+image 598,1080
+images/nicole sc5 angry.png
+image 598,1080
+images/nicole sc5 flirt.png
+image 598,1080
+images/nicole sc5 sad.png
+image 598,1080
+images/nicole sc5 sly.png
+image 598,1080
+images/nicole sc5 surprised.png
+image 598,1080
+images/nicole sc5.png
+image 598,1080
+images/nicole sc6 angry.png
+image 598,1080
+images/nicole sc6 sad.png
+image 598,1080
+images/nicole sc6 scream.png
+image 598,1080
+images/nicole sc6 smile.png
+image 598,1080
+images/nicole sc6 surprised.png
+image 598,1080
+images/nicole sc6.png
+image 598,1080
+images/nicole sc7 angry.png
+image 598,1080
+images/nicole sc7 sad.png
+image 598,1080
+images/nicole sc7 scream.png
+image 598,1080
+images/nicole sc7.png
+image 598,1080
+images/nicole sc8 angry.png
+image 598,1080
+images/nicole sc8 surprised.png
+image 598,1080
+images/nicole sc8.png
+image 598,1080
+images/nicole sc9 surprised.png
+image 598,1080
+images/nicole sc9.png
+image 598,1080
+images/nicole shirt angry.png
+image 598,1080
+images/nicole shirt.png
+image 598,1080
+images/nicole sly.png
+image 598,1080
+images/nicole smile.png
+image 598,1080
+images/nicole tanktop angry.png
+image 598,1080
+images/nicole tanktop sad.png
+image 598,1080
+images/nicole tanktop sly.png
+image 598,1080
+images/nicole tanktop smile.png
+image 598,1080
+images/nicole tanktop.png
+image 598,1080
+images/nicole underwear angry.png
+image 598,1080
+images/nicole underwear sad.png
+image 598,1080
+images/nicole underwear surprised.png
+image 598,1080
+images/nicole underwear.png
+image 598,1080
+images/nicole white surprised.png
+image 598,1080
+images/nicole white.png
+image 598,1080
+images/nicole.png
+image 598,1080
+images/office 1.jpg
+image 1920,1080
+images/office 2.jpg
+image 1920,1080
+images/photo classroom.jpg
+image 1920,1080
+images/pills cap.png
+image 836,401
+images/podium.png
+image 246,1080
+images/school courtyard.jpg
+image 1920,1080
+images/school ext 1.jpg
+image 1920,1080
+images/school ext 2.jpg
+image 1920,1080
+images/school ext 3.jpg
+image 1920,1080
+images/school ext 4.jpg
+image 1920,1080
+images/school front.jpg
+image 1920,1080
+images/school int 1.jpg
+image 1920,1080
+images/school int 2.jpg
+image 1920,1080
+images/suicide b.png
+image 1920,1080
+images/suicide.png
+image 1920,1080
+images/teacher_1 angry.png
+image 598,1080
+images/teacher_1.png
+image 598,1080
+images/teacher_2.png
+image 598,1080
+images/text colby.png
+image 1920,1080
+images/text crispin 1.png
+image 1920,1080
+images/text crispin 2.png
+image 1920,1080
+images/text kylar 1.png
+image 1920,1080
+images/title_april2008.png
+image 1920,1080
+images/title_june2009.png
+image 1920,1080
+images/title_months.png
+image 1920,1080
+images/title_october2008.png
+image 1920,1080
+images/title_september2007.png
+image 1920,1080
+images/wheat.jpg
+image 1920,1080
+images/white.png
+image 1920,1080
+images/yearbook.png
+image 1920,1080
+images/z1zdust.png
+image 1920,1080
+images/z2zdust.png
+image 1920,1080
+images/z3zdust.png
+image 1920,1080
+images/z4zdust.png
+image 1920,1080
+images/z5zdust.png
+image 1920,1080
+images/z6zdust.png
+image 1920,1080
+images/z7zdust.png
+image 1920,1080
+images/z8zdust.png
+image 1920,1080
+logosplash.webm
+video -
+opening.webm
+video -
+percpop.webm
+video -

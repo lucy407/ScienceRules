@@ -3,121 +3,147 @@
     "title": "Slope",
     "description": "Fast-paced 3D runner game.",
     "url": "../games/Slope.html",
-    "image": "../assets/slope.png"
+    "image": "../assets/slope.png",
+    "category": "Action"
   },
   {
     "title": "Angry Birds",
     "description": "Knock down the bads piggies towers!",
     "url": "../games/Angry Birds.html",
-    "image": "../assets/angrybirds.png"
+    "image": "../assets/angrybirds.png",
+    "category": "Puzzle"
   },
   {
     "title": "1v1.LoL",
     "description": "Third person shooter & building simulator",
     "url": "../games/1v1.LoL.html",
-    "image": "../assets/1v1lol.png"
+    "image": "../assets/1v1lol.png",
+    "category": "Shooter"
   },
   {
     "title": "Bad Parenting",
     "description": "Bad Parenting is a psychological horror game where you play as a child facing the terrifying Mr. Red Face and uncover the dark truth behind his existence.",
     "url": "../games/Bad Parenting 1.html",
-    "image": "../assets/badparenting.png"
+    "image": "../assets/badparenting.png",
+    "category": "Horror"
   },
   {
     "title": "BitLife",
     "description": "BitLife is a life simulation game where you make choices for a character from birth to death, shaping their career, relationships, habits, and overall life story.",
     "url": "../games/BitLife.html",
-    "image": "../assets/bitlife.png"
+    "image": "../assets/bitlife.png",
+    "category": "Simulation"
   },
   {
     "title": "Basket Random",
     "description": "Silly Pixelized basketball game",
     "url": "../games/Basket Random.html",
-    "image": "../assets/basketrandom.png"
+    "image": "../assets/basketrandom.png",
+    "category": "Sports"
   },
   {
     "title": "Chiikawa Puzzle",
     "description": "Try and recreate chiikawa from memory! Re-assemble him and see how funny he looks.",
     "url": "../games/Chiikawa Puzzle.html",
-    "image": "../assets/Chiikawapuzzle.png"
+    "image": "../assets/Chiikawapuzzle.png",
+    "category": "Puzzle"
   },
   {
     "title": "Bloxorz",
     "description": "Bloxorz is a challenging puzzle game where you control a rectangular block, rolling it across a platform to fit perfectly into a square hole without falling off the edges.",
     "url": "../games/Bloxorz.html",
-    "image": "../assets/Bloxorz.png"
+    "image": "../assets/Bloxorz.png",
+    "category": "Puzzle"
   },
   {
     "title": "Minecraft",
     "description": "Minecraft is a sandbox video game that allows players to explore, build, and survive in a procedurally generated, block-based world.",
     "url": "../games/Minecraft.html",
-    "image": "../assets/Minecraft.png"
+    "image": "../assets/Minecraft.png",
+    "category": "Sandbox"
   },
   {
     "title": "Yume Nikki",
     "description": "Yume nikki is a surreal indie game where you explore the dream world of a reclusive girl, collecting strange effects in a haunting, wordless adventure.",
     "url": "../games/Yume Nikki.html",
-    "image": "../assets/yumenikki.png"
+    "image": "../assets/yumenikki.png",
+    "category": "Horror"
   },
   {
     "title": "Learn To Fly",
     "description": "Learn to Fly is a fun, physics-based game where you launch a penguin across the sky, upgrading gear and skills to fly farther with each attempt.",
     "url": "../games/Learn to Fly.html",
-    "image": "../assets/learntofly.png"
+    "image": "../assets/learntofly.png",
+    "category": "Arcade"
   },
   {
     "title": "Granny",
     "description": "Granny is a horror stealth game where you must escape a creepy house without being caught by Granny, using stealth, puzzles, and quick thinking to survive.",
     "url": "../games/Granny.html",
-    "image": "../assets/Granny.png"
+    "image": "../assets/Granny.png",
+    "category": "Horror"
   },
   {
     "title": "Cut the Rope",
     "description": "Cut the Rope is a physics-puzzle game where you feed candy to a little monster named Om Nom by cutting ropes and triggering fun chain reactions.",
     "url": "../games/Cut the Rope.html",
-    "image": "../assets/cuttherope.png"
+    "image": "../assets/cuttherope.png",
+    "category": "Puzzle"
   },
   {
     "title": "Friday Night Funkin'",
     "description": "Friday Night Funkin’ is a rhythm game where you hit the right notes to rap and sing your way through quirky, challenging music battles.",
     "url": "../games/Friday Night Funkin.html",
-    "image": "../assets/fridaynightfunkin.png"
+    "image": "../assets/fridaynightfunkin.png",
+    "category": "Rhythm"
   },
   {
     "title": "Cookie Clicker",
     "description": "Cookie Clicker is an incremental game where you bake cookies by clicking and buying upgrades, watching your cookie empire grow endlessly.",
     "url": "../games/Cookie Clicker.html",
-    "image": "../assets/cookieclicker.png"
+    "image": "../assets/cookieclicker.png",
+    "category": "Idle"
   },
   {
     "title": "Osu!",
     "description": "Osu! is a fast-paced rhythm game where you click, slide, and spin to the beat of songs with absurd precision and anime-level energy.",
     "url": "../games/osu!.html",
-    "image": "../assets/osu.png"
+    "image": "../assets/osu.png",
+    "category": "Rhythm"
   },
   {
     "title": "BLOODMONEY",
     "description": "BLOODMONEY! is a darkly twisted clicker game where you’re desperate to raise $25,000 for a life-saving surgery. You meet Harvey Harvington, who offers $1 per click—but to earn more, you must inflict pain on him using various tools.",
     "url": "../games/BLOODMONEY!.html",
-    "image": "../assets/bloodmoney.png"
+    "image": "../assets/bloodmoney.png",
+    "category": "Horror"
   },
   {
     "title": "Doki Doki Literature Club",
     "description": "Doki Doki Literature Club! starts as a cheerful high school dating sim but quickly turns into a psychological horror game. It breaks the fourth wall, using glitches and disturbing events to create a tense, unsettling story.",
     "url": "../games/ddlc.html",
-    "image": "../assets/ddlc.jpg"
+    "image": "../assets/ddlc.jpg",
+    "category": "Visual Novel"
   },
   {
     "title": "Doodle Jump",
     "description": "Doodle Jump is a fast-paced vertical platformer where you guide a little four-legged creature called “The Doodler” up an endless series of platforms, shooting monsters and dodging hazards.",
     "url": "../games/Doodle Jump.html",
-    "image": "../assets/doodlejump.png"
+    "image": "../assets/doodlejump.png",
+    "category": "Arcade"
   },
   {
     "title": "The Binding of Issac: Wrath of the Lamb",
     "description": "The Binding of Isaac: Wrath of the Lamb is a dark, randomly generated roguelike shooter where a crying child battles grotesque monsters in a nightmarish basement inspired by biblical themes and psychological horror.",
     "url": "../games/TBOIWOTL.html",
-    "image": "../assets/tboiwotl.png"
+    "image": "../assets/tboiwotl.png",
+    "category": "Roguelike"
+  },
+  {
+    "title": "Class of ’09",
+    "description": "Class of ’09 is a visual novel set in the early 2000s. Experience the chaos of high school life through sharp humor, edgy characters, and twisted choices.",
+    "url": "../games/Class of 09.html",
+    "image": "../assets/classof09.png",
+    "category": "Visual Novel"
   }
-
 ]
