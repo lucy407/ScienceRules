@@ -14,6 +14,7 @@
     <div>
       <h1>ScienceRules</h1>
       <h2>Alt Links</h2> 
+    </div>
   </div>
 </header>
 
@@ -23,55 +24,63 @@
   <a href="/pages/games.html">Games</a>
   <a href="/pages/shows.html">Shows & Movies</a>
   <a href="https://discord.gg/aSqgnkPRyD" target="_blank" rel="noopener">Discord</a>
-
 </nav>
-  <main class="links-section">
-    <div class="link-cards">
-      <a href="https://sciencerules.buzz" class="link-card">
-        <img src="../assets/atom.png" class="link-logo">
-        <span>sciencerules.buzz</span>
-      </a>
-      <a href="https://sciencerules.cfd" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.cfd</span>
-      </a>
-      <a href="https://sciencerules.sbs" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.sbs</span>
-      </a>
-      <a href="https://sciencerules.online" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.online</span>
-      </a>
-      <a href="https://sciencerules.xyz" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.xyz</span>
-      </a>
-      <a href="https://sciencerules.lat" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.lat</span>
-      </a>
-      <a href="https://sciencerules.site" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerules.site</span>
-      </a>
-       <a href="https://sciencerulesubg.vercel.app" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>sciencerulesubg.vercel.app</span>
-      </a>
-       </a>
-       <a href="https://npm.nodelibrary.org/" class="link-card">
-        <img src="../assets/atom.png"  class="link-logo">
-        <span>npm.nodelibrary.org</span>
-      </a>
-    </div>
-    <footer>
+
+<main class="links-section">
+  <div class="counter" style="text-align:center; margin-bottom:20px; font-size:1.2em; font-weight:bold;"></div>
+  <div class="link-cards">
+    <a href="https://sciencerules.buzz" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.buzz</span>
+    </a>
+    <a href="https://sciencerules.cfd" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.cfd</span>
+    </a>
+    <a href="https://sciencerules.sbs" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.sbs</span>
+    </a>
+    <a href="https://sciencerules.online" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.online</span>
+    </a>
+    <a href="https://sciencerules.xyz" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.xyz</span>
+    </a>
+    <a href="https://sciencerules.lat" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.lat</span>
+    </a>
+    <a href="https://sciencerules.site" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerules.site</span>
+    </a>
+    <a href="https://sciencerulesubg.vercel.app" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>sciencerulesubg.vercel.app</span>
+    </a>
+    <a href="https://npm.nodelibrary.org/" class="link-card">
+      <img src="../assets/atom.png" class="link-logo">
+      <span>npm.nodelibrary.org</span>
+    </a>
+  </div>
+  <footer>
     <a href="https://discord.gg/aSqgnkPRyD" class="link-card">
-        <span>Join our Discord to be notified of new links<br>.gg/aSqgnkPRyD</span>
-      </a>
-      </footer>
-  </main>
-</body>
+      <span>Join our Discord to be notified of new links<br>.gg/aSqgnkPRyD</span>
+    </a>
+  </footer>
+</main>
+
 <script src="../scripts/loading.js"></script>
 <script src="../scripts/mobile.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".link-cards .link-card");
+  const counter = document.querySelector(".counter");
+  counter.textContent = "Total Domains: " + links.length;
+});
+</script>
+</body>
 </html>
