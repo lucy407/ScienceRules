@@ -222,6 +222,4 @@ nav a:hover {
   .welcome-section p{font-size:1.1em;}
   #game-list{gap:14px;}
 }
-@media screen and (max-width: 700px) {
-img {width: 200px}
-}
+

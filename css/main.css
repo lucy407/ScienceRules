@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(145deg, #0c0d11, #181b23);
@@ -13,6 +18,7 @@ body {
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 header {
@@ -25,21 +31,26 @@ header {
   background: rgba(20, 20, 25, 0.85);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid #333;
+  transition: padding 0.3s ease, gap 0.3s ease;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
+  width: clamp(50px, 18vw, 100px);
+  height: auto;
   object-fit: contain;
   animation: spin 3s linear infinite;
   transition: transform 0.3s ease;
 }
+
 .logo:hover {
   transform: rotate(5deg) scale(1.05);
 }
@@ -48,6 +59,65 @@ header {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-@media screen and (max-width: 700px) {
-img {width: 200px}
+
+
+
+@media (max-width: 1024px) {
+  header {
+    padding: 40px 15px;
+  }
 }
+
+@media (max-width: 768px) {
+  header {
+    gap: 12px;
+    padding: 30px 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 90%;
+  }
+
+  body {
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  header {
+    padding: 25px 10px;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, a {
+    touch-action: manipulation;
+    min-height: 44px; 
+  }
+}
+
+
+@media (max-width: 360px) {
+  html {
+    font-size: 85%;
+  }
+
+  .logo {
+    width: 50px;
+  }
+}
+                  
