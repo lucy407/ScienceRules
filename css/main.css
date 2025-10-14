@@ -63,6 +63,9 @@ header {
 
 
 @media (max-width: 1024px) {
+  body {
+    overflow-x: none;
+  }
   header {
     padding: 40px 15px;
   }

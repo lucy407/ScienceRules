@@ -298,7 +298,7 @@
     "description": "Feed, clean, and care for your alien pet Pou while dressing it up with fun outfits and accessories.",
     "url": "../games/Pou.html",
     "image": "../assets/pouwow.png",
-    "category": "Simulator"
+    "category": "Simulation"
   },
   {
     "title": "Slender: The 8 Pages",
@@ -313,5 +313,61 @@
     "url": "../games/Snowbattle.io.html",
     "image": "../assets/sbio.png",
     "category": "Action"
-  }
+  },
+  {
+    "title": "Amanda the Adventurer",
+    "description": "Watch old kids’ show tapes that twist into terrifying experiences as Amanda reveals dark secrets on screen.",
+    "url": "../games/Amanda the Adventurer.html",
+    "image": "../assets/ata.png",
+    "category": "Horror"
+  },
+  {
+    "title": "Andy's Apple Farm",
+    "description": "Play as Andy exploring a retro farm game that slowly unravels into eerie glitches and hidden horrors beneath the cheerful surface.",
+    "url": "../games/Andy's Apple Farm.html",
+    "image": "../assets/aaf.png",
+    "category": "Horror"
+  },
+  {
+    "title": "Bendy and the Ink Machine",
+    "description": "Explore a deserted animation studio where ink comes to life and uncover the dark secrets behind its cartoon creations.",
+    "url": "../games/Bendy and the Ink Machine.html",
+    "image": "../assets/bati.png",
+    "category": "Horror"
+  },
+  {
+  "title": "DELTARUNE",
+  "description": "Embark on a strange journey with Kris, Susie, and Ralsei through a dark world filled with charm, danger, and heartfelt choices.",
+  "url": "../games/DELTARUNE.html",
+  "image": "../assets/deltarune.jpg",
+  "category": "Action"
+},
+{
+  "title": "Hotline Miami",
+  "description": "Slash and shoot your way through neon-soaked levels filled with brutal combat, surreal storytelling, and relentless synthwave energy.",
+  "url": "../games/Hotline Miami.html",
+  "image": "../assets/hm.jpg",
+  "category": "Action"
+},
+{
+  "title": "Kindergarten 1",
+  "description": "Navigate a twisted elementary school full of dark humor, deadly secrets, and bizarre characters in this disturbing adventure.",
+  "url": "../games/Kindergarten 1.html",
+  "image": "../assets/kg1.jpg",
+  "category": "Action"
+},
+{
+  "title": "Kindergarten 2",
+  "description": "Return for another chaotic school day packed with new students, twisted missions, and even darker secrets to uncover.",
+  "url": "../games/Kindergarten 2.html",
+  "image": "../assets/kg2.jpg",
+  "category": "Action"
+},
+{
+  "title": "Hungry Pumpkin",
+  "description": "Serve food to a demanding pumpkin who only eats what he wants in this weirdly addictive retro flash classic.",
+  "url": "../games/Hungry Pumpkin.html",
+  "image": "../assets/pumpkin.jpg",
+  "category": "Arcade"
+}
 ]
