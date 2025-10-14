@@ -171,13 +171,16 @@ nav a:hover {
 .game-buttons button, .game-buttons a {
   padding: 8px 14px;
   background: #5ac8fa;
-  color: #000;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  margin-top: 15px;
 }
 .game-buttons button:hover, .game-buttons a:hover {
   background: #49b7d6;
@@ -215,6 +218,11 @@ nav a:hover {
   width:100%;
 }
 
+#category {
+  background-color: #43a2ce;
+  padding: 5px;
+  border-radius: 5px;
+}
 
 @media(max-width:700px){
   h1{font-size:2.2em;}
@@ -222,4 +230,3 @@ nav a:hover {
   .welcome-section p{font-size:1.1em;}
   #game-list{gap:14px;}
 }
-

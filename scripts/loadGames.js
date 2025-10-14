@@ -10,7 +10,8 @@ fetch('../scripts/games.json')
     allGames = games;
     games.forEach(g => { if (g.category) allCategories.add(g.category); });
     setupSortDropdown();
-    displayGames(allGames);
+    const sortedAZ = [...allGames].sort((a, b) => a.title.localeCompare(b.title));
+    displayGames(sortedAZ);
   })
   .catch(err => console.error('Error loading games:', err));
 
@@ -67,6 +68,7 @@ function displayGames(games) {
       <img src="${game.image}" alt="${game.title}" class="game-image" />
       <h3>${game.title}</h3>
       <p>${game.description}</p>
+      <span id="category">${game.category}</span>
       <div class="game-buttons">
         <button class="play-inside-btn">Play</button>
         <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="external-link">Open in New Tab</a>
