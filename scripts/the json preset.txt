@@ -2,5 +2,6 @@
     "title": "",
     "description": "",
     "url": "../games/.html",
-    "image": "../assets/.png"
+    "image": "../assets/.png",
+    "category": ""
   }
