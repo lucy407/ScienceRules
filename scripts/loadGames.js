@@ -1,7 +1,7 @@
 let allGames = [];
 let allCategories = new Set();
 
-fetch('../scripts/games.json')
+fetch('/scripts/games.json')
   .then(res => {
     if (!res.ok) throw new Error('Failed to load games.json');
     return res.json();
@@ -70,14 +70,24 @@ function displayGames(games) {
       <p>${game.description}</p>
       <span id="category">${game.category}</span>
       <div class="game-buttons">
-        <button class="play-inside-btn">Play</button>
-        <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="external-link">Open in New Tab</a>
+        <button class="play-inside-btn">
+          ${game.noIframe ? 'Open in New Tab' : 'Play'}
+        </button>
+        <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="external-link">
+          Open in New Tab
+        </a>
       </div>
     `;
     gameList.appendChild(card);
 
-    card.querySelector('.play-inside-btn').addEventListener('click', () => {
-      openGameInIframe(game.url, game.title);
+    const playButton = card.querySelector('.play-inside-btn');
+
+    playButton.addEventListener('click', () => {
+      if (game.gooseblock) { // i called it gooseblock because i thought it was funny
+        window.open(game.url, '_blank', 'noopener,noreferrer');
+      } else {
+        openGameInIframe(game.url, game.title);
+      }
     });
   });
 }

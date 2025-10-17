@@ -123,7 +123,7 @@
     "description": "A cheerful dating sim that turns into a psychological horror full of twists, glitches, and eerie surprises.",
     "url": "../games/ddlc.html",
     "image": "../assets/ddlc.jpg",
-    "category": "Visual Novel"
+    "category": "Story"
   },
   {
     "title": "Doodle Jump",
@@ -144,7 +144,7 @@
     "description": "A darkly comedic visual novel set in the early 2000s high school scene filled with edgy humor and chaos.",
     "url": "../games/Class of 09.html",
     "image": "../assets/classof09.png",
-    "category": "Visual Novel"
+    "category": "Story"
   },
   {
     "title": "Friday Night Funkin vs Shaggy Mod",
@@ -340,7 +340,7 @@
   "description": "Embark on a strange journey with Kris, Susie, and Ralsei through a dark world filled with charm, danger, and heartfelt choices.",
   "url": "../games/DELTARUNE.html",
   "image": "../assets/deltarune.jpg",
-  "category": "Action"
+  "category": "Story"
 },
 {
   "title": "Hotline Miami",
@@ -354,14 +354,14 @@
   "description": "Navigate a twisted elementary school full of dark humor, deadly secrets, and bizarre characters in this disturbing adventure.",
   "url": "../games/Kindergarten 1.html",
   "image": "../assets/kg1.jpg",
-  "category": "Action"
+  "category": "Story"
 },
 {
   "title": "Kindergarten 2",
   "description": "Return for another chaotic school day packed with new students, twisted missions, and even darker secrets to uncover.",
   "url": "../games/Kindergarten 2.html",
   "image": "../assets/kg2.jpg",
-  "category": "Action"
+  "category": "Story"
 },
 {
   "title": "Hungry Pumpkin",
@@ -369,5 +369,30 @@
   "url": "../games/Hungry Pumpkin.html",
   "image": "../assets/pumpkin.jpg",
   "category": "Arcade"
+},
+{
+  "title": "Clash Royale",
+  "description": "Collect cards, build powerful decks, and battle opponents in real-time strategy duels featuring your favorite Clash characters.",
+  "url": "../games/Clash Royale.html",
+  "image": "../assets/clashroyale.jpg",
+  "category": "Strategy",
+  "gooseblock": true
+},
+{
+  "title": "Fortnite",
+  "description": "Drop into massive battles, build structures on the fly, and fight to be the last one standing in this iconic battle royale.",
+  "url": "../games/Fortnite.html",
+  "image": "../assets/fortnite.jpg",
+  "category": "Shooter",
+  "gooseblock": true
+},
+{
+  "title": "Roblox",
+  "description": "Create, play, and explore millions of user-made worlds filled with endless games, adventures, and community creativity.",
+  "url": "../games/Roblox.html",
+  "image": "../assets/roblox.jpg",
+  "category": "Sandbox",
+  "gooseblock": true
 }
+
 ]
