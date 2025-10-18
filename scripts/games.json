@@ -393,6 +393,20 @@
   "image": "../assets/roblox.jpg",
   "category": "Sandbox",
   "gooseblock": true
+},
+{
+    "title": "Retro Bowl",
+    "description": "Retro Bowl is a classic-style football management game combining nostalgic pixel art with modern strategy. build your team, call plays, and lead your franchise to championship glory.",
+    "url": "../games/Retro Bowl.html",
+    "image": "../assets/retrobowl.png",
+    "category": "Arcade"
+},
+{
+  "title": "DOOM",
+  "description": "DOOM is a fast-paced first-person shooter where you battle hordes of demons from Hell using powerful weapons and brutal combat. Known for its intense action and heavy metal atmosphere, it’s a cornerstone of gaming history.",
+  "url": "../games/DOOM.html",
+  "image": "../assets/doom.png",
+  "category": "Shooter"
 }
 
 ]
