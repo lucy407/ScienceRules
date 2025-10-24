@@ -1,2 +1,2 @@
 # ScienceRules
-Opensourced unblocked games site for schools!
+unblocked games site for schools!
