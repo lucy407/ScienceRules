@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,135 +7,180 @@
 }
 
 body {
-  font-family: 'VT323', monospace;
-  background: radial-gradient(circle at top, #0d0d16 0%, #050507 100%);
-  color: #00ffcc;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(145deg, #0c0d11, #181b23);
+  color: #e0e0e0;
+  min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
-  min-height: 100vh;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 
 header {
-  background: linear-gradient(90deg, #001f2b, #002a38);
-  border-bottom: 3px solid #00ffcc;
-  box-shadow: 0 0 25px #00ffc822, inset 0 0 10px #00ffc810;
-  padding: 40px 10px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 25, 0.85);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #333;
 }
 
-header::after {
-  content: "◉ SCIENCE ONLINE ◉";
-  display: block;
-  color: #00ffcc;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.8em;
-  letter-spacing: 3px;
-  margin-top: 10px;
-  animation: scanline 3s infinite linear;
-  opacity: 0.8;
-}
-
-@keyframes scanline {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.4; }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
-  filter: drop-shadow(0 0 10px #00ffcc);
-  animation: rotate 6s linear infinite;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: spin 3s linear infinite;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: rotate(5deg) scale(1.05);
 }
 
-@keyframes rotate {
+@keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.4em;
-  color: #00ffcc;
-  text-shadow: 0 0 12px #00ffee, 0 0 24px #00ffee55;
-  letter-spacing: 2px;
+  font-size: 2.8em;
+  color: #5ac8fa;
 }
 
 h2 {
-  font-size: 1.1em;
-  color: #7fffd4;
-  margin-top: 8px;
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #c0c0c0;
+  min-height: 1.5em;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
 }
+
+#random-phrase::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+.logo-container div {
+  max-width: 300px; 
+}
+
+#random-phrase {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.3;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
 
 nav {
-  background: linear-gradient(180deg, #00111a, #000);
-  border-top: 2px solid #00ffcc;
-  border-bottom: 2px solid #00ffcc;
-  padding: 10px;
-  box-shadow: 0 0 15px #00ffcc33;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #16171b;
+  padding: 14px;
+  box-shadow: inset 0 -1px 0 #222;
 }
-
 nav a {
-  color: #00ffee;
+  color: #e0e0e0;
   text-decoration: none;
-  font-size: 1em;
-  margin: 0 8px;
-  padding: 8px 14px;
-  border: 1px solid #00ffc8;
-  border-radius: 6px;
-  background: rgba(0, 255, 204, 0.05);
+  font-weight: 500;
+  font-size: 1.05em;
+  padding: 10px 18px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
-
 nav a:hover {
-  background: #00ffcc22;
-  color: #ffffff;
-  box-shadow: 0 0 12px #00ffc8;
-  transform: scale(1.05);
+  background: #5ac8fa33;
+  color: #5ac8fa;
+  box-shadow: 0 0 12px #5ac8fa44;
 }
 
 .carousel-section {
   margin: 3rem auto;
-  max-width: 1000px;
-  background: rgba(0, 20, 25, 0.7);
-  border: 2px solid #00ffcc66;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 0 20px #00ffcc44;
+  max-width: 1100px;
+  text-align: center;
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 .carousel-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffee;
-  text-shadow: 0 0 8px #00ffee;
-  margin-bottom: 1.2rem;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #58b4ff;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 10px rgba(90, 200, 250, 0.3);
 }
 
 .carousel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #0e1014, #171a21);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.carousel-slide {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+  display: grid;
+  opacity: 1;
+}
+
+.carousel-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .carousel-image-container {
-  background: #00151a;
-  border: 2px solid #00ffc822;
-  border-radius: 10px;
+  background: #15171c;
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 0 10px #00ffc822;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
 }
 
 .carousel-image-container:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 0 20px #00ffc855;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-image-container img {
   width: 100%;
-  height: auto;
-  filter: brightness(0.85);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: brightness(0.9);
   transition: filter 0.3s ease;
 }
 
@@ -144,28 +189,25 @@ nav a:hover {
 }
 
 .carousel-title {
-  background: rgba(0, 255, 204, 0.1);
-  color: #7fffd4;
-  padding: 6px;
-  font-family: 'VT323';
-  font-size: 1em;
-  border-top: 1px solid #00ffc833;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.7rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #f8f8f8;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  font-family: 'Montserrat';
+  font-weight: bold;
 }
 
-footer {
-  margin-top: 2rem;
-  padding: 20px;
-  font-family: 'VT323';
-  color: #00ffccaa;
-  border-top: 1px solid #00ffcc33;
-}
-
-footer a {
-  color: #00ffee;
-  text-decoration: underline;
-}
 
 @media (max-width: 700px) {
-  h1 { font-size: 1.8em; }
-  nav a { font-size: 0.9em; }
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.1em; }
+  .carousel-section { max-width: 95%; }
 }
