@@ -1,152 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url('https://www.cursor.cc/cursor/171/18/cursor.png'), auto;
 }
 
 body {
-  font-family: 'Press Start 2P', cursive;
-  background: url('https://web.archive.org/web/20091027075714/http://geocities.com/clipart/patterns/stars.gif') repeat;
-  color: #00ff00;
+  font-family: 'VT323', monospace;
+  background: radial-gradient(circle at top, #0d0d16 0%, #050507 100%);
+  color: #00ffcc;
   text-align: center;
   overflow-x: hidden;
+  min-height: 100vh;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 
 header {
-  background: linear-gradient(90deg, #0000ff, #ff00ff);
-  padding: 20px;
-  border: 3px dashed #ffff00;
-  animation: flashbg 2s infinite alternate;
+  background: linear-gradient(90deg, #001f2b, #002a38);
+  border-bottom: 3px solid #00ffcc;
+  box-shadow: 0 0 25px #00ffc822, inset 0 0 10px #00ffc810;
+  padding: 40px 10px;
+  position: relative;
 }
 
-@keyframes flashbg {
-  0% { background: #ff00ff; }
-  50% { background: #0000ff; }
-  100% { background: #ff0000; }
+header::after {
+  content: "◉ SCIENCE ONLINE ◉";
+  display: block;
+  color: #00ffcc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  animation: scanline 3s infinite linear;
+  opacity: 0.8;
+}
+
+@keyframes scanline {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 0 10px #00ffcc);
+  animation: rotate 6s linear infinite;
 }
 
-@keyframes spin {
+@keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 h1 {
-  font-size: 1.5em;
-  color: #ff00ff;
-  text-shadow: 2px 2px #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4em;
+  color: #00ffcc;
+  text-shadow: 0 0 12px #00ffee, 0 0 24px #00ffee55;
+  letter-spacing: 2px;
 }
 
 h2 {
-  font-size: 0.9em;
-  color: #ffff00;
-  background: #000;
-  display: inline-block;
-  padding: 5px 10px;
-  animation: blinktext 1s step-start infinite;
-}
-
-@keyframes blinktext {
-  50% { color: #00ffff; }
+  font-size: 1.1em;
+  color: #7fffd4;
+  margin-top: 8px;
+  font-weight: normal;
 }
 
 nav {
-  background: #000080;
-  border-top: 3px double #00ff00;
-  border-bottom: 3px double #00ff00;
+  background: linear-gradient(180deg, #00111a, #000);
+  border-top: 2px solid #00ffcc;
+  border-bottom: 2px solid #00ffcc;
   padding: 10px;
+  box-shadow: 0 0 15px #00ffcc33;
 }
 
 nav a {
-  color: #ffff00;
+  color: #00ffee;
   text-decoration: none;
-  background: #ff00ff;
+  font-size: 1em;
+  margin: 0 8px;
   padding: 8px 14px;
-  border: 2px outset #00ffff;
-  display: inline-block;
-  margin: 3px;
-  font-size: 0.8em;
-  transition: all 0.2s ease;
+  border: 1px solid #00ffc8;
+  border-radius: 6px;
+  background: rgba(0, 255, 204, 0.05);
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background: #00ffff;
-  color: #000;
-  transform: scale(1.2);
+  background: #00ffcc22;
+  color: #ffffff;
+  box-shadow: 0 0 12px #00ffc8;
+  transform: scale(1.05);
 }
 
 .carousel-section {
-  margin: 2rem auto;
-  background: #000;
-  border: 4px ridge #ff00ff;
-  padding: 10px;
-  box-shadow: 0 0 20px #ff00ff;
+  margin: 3rem auto;
+  max-width: 1000px;
+  background: rgba(0, 20, 25, 0.7);
+  border: 2px solid #00ffcc66;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 0 20px #00ffcc44;
 }
 
 .carousel-section h2 {
-  color: #00ffff;
-  text-shadow: 2px 2px #ff00ff;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffee;
+  text-shadow: 0 0 8px #00ffee;
+  margin-bottom: 1.2rem;
 }
 
 .carousel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 .carousel-image-container {
-  width: 200px;
-  height: 150px;
-  border: 3px groove #00ff00;
-  background: #111;
-  box-shadow: 0 0 10px #00ffff;
-  transition: transform 0.3s ease;
+  background: #00151a;
+  border: 2px solid #00ffc822;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px #00ffc822;
 }
 
 .carousel-image-container:hover {
-  transform: rotate(5deg) scale(1.1);
-  background: #222;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px #00ffc855;
 }
 
 .carousel-image-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-bottom: 2px solid #00ff00;
+  height: auto;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.carousel-image-container:hover img {
+  filter: brightness(1);
 }
 
 .carousel-title {
-  font-size: 0.7em;
-  color: #ffff00;
-  text-shadow: 1px 1px #ff00ff;
-  margin-top: 5px;
+  background: rgba(0, 255, 204, 0.1);
+  color: #7fffd4;
+  padding: 6px;
+  font-family: 'VT323';
+  font-size: 1em;
+  border-top: 1px solid #00ffc833;
 }
 
-marquee {
-  font-size: 0.8em;
-  color: #ff00ff;
-  background: #000;
-  border: 2px dotted #00ffff;
-  padding: 4px;
-  margin: 10px 0;
+footer {
+  margin-top: 2rem;
+  padding: 20px;
+  font-family: 'VT323';
+  color: #00ffccaa;
+  border-top: 1px solid #00ffcc33;
+}
+
+footer a {
+  color: #00ffee;
+  text-decoration: underline;
 }
 
 @media (max-width: 700px) {
-  body {
-    background-size: cover;
-  }
-  nav a {
-    font-size: 0.7em;
-  }
+  h1 { font-size: 1.8em; }
+  nav a { font-size: 0.9em; }
 }
-
