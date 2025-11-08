@@ -1,47 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: url('https://www.cursor.cc/cursor/171/18/cursor.png'), auto;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(145deg, #0c0d11, #181b23);
-  color: #e0e0e0;
-  min-height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  background: url('https://web.archive.org/web/20091027075714/http://geocities.com/clipart/patterns/stars.gif') repeat;
+  color: #00ff00;
   text-align: center;
   overflow-x: hidden;
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding: 50px 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(20, 20, 25, 0.85);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid #333;
+  background: linear-gradient(90deg, #0000ff, #ff00ff);
+  padding: 20px;
+  border: 3px dashed #ffff00;
+  animation: flashbg 2s infinite alternate;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+@keyframes flashbg {
+  0% { background: #ff00ff; }
+  50% { background: #0000ff; }
+  100% { background: #ff0000; }
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  animation: spin 3s linear infinite;
-  transition: transform 0.3s ease;
-}
-.logo:hover {
-  transform: rotate(5deg) scale(1.05);
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -50,165 +40,113 @@ header {
 }
 
 h1 {
-  font-size: 2.8em;
-  color: #5ac8fa;
+  font-size: 1.5em;
+  color: #ff00ff;
+  text-shadow: 2px 2px #00ffff;
 }
 
 h2 {
-  font-weight: 400;
-  font-size: 1.3em;
-  color: #c0c0c0;
-  min-height: 1.5em;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#random-phrase::after {
-  content: '|';
-  animation: blink 1s step-end infinite;
-}
-@keyframes blink {
-  50% { opacity: 0; }
-}
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap; 
-}
-
-.logo-container div {
-  max-width: 300px; 
-}
-
-#random-phrase {
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  display: block;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.3;
+  font-size: 0.9em;
+  color: #ffff00;
+  background: #000;
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
+  padding: 5px 10px;
+  animation: blinktext 1s step-start infinite;
 }
 
+@keyframes blinktext {
+  50% { color: #00ffff; }
+}
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background: #16171b;
-  padding: 14px;
-  box-shadow: inset 0 -1px 0 #222;
+  background: #000080;
+  border-top: 3px double #00ff00;
+  border-bottom: 3px double #00ff00;
+  padding: 10px;
 }
+
 nav a {
-  color: #e0e0e0;
+  color: #ffff00;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1.05em;
-  padding: 10px 18px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+  background: #ff00ff;
+  padding: 8px 14px;
+  border: 2px outset #00ffff;
+  display: inline-block;
+  margin: 3px;
+  font-size: 0.8em;
+  transition: all 0.2s ease;
 }
+
 nav a:hover {
-  background: #5ac8fa33;
-  color: #5ac8fa;
-  box-shadow: 0 0 12px #5ac8fa44;
+  background: #00ffff;
+  color: #000;
+  transform: scale(1.2);
 }
 
 .carousel-section {
-  margin: 3rem auto;
-  max-width: 1100px;
-  text-align: center;
-  color: #fff;
-  font-family: "Inter", system-ui, sans-serif;
+  margin: 2rem auto;
+  background: #000;
+  border: 4px ridge #ff00ff;
+  padding: 10px;
+  box-shadow: 0 0 20px #ff00ff;
 }
 
 .carousel-section h2 {
-  font-size: 2em;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #58b4ff;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 10px rgba(90, 200, 250, 0.3);
+  color: #00ffff;
+  text-shadow: 2px 2px #ff00ff;
 }
 
 .carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #0e1014, #171a21);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-}
-
-.carousel-slide {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-slide.active {
-  display: grid;
-  opacity: 1;
-}
-
-.carousel-link {
-  text-decoration: none;
-  color: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
 }
 
 .carousel-image-container {
-  background: #15171c;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
+  width: 200px;
+  height: 150px;
+  border: 3px groove #00ff00;
+  background: #111;
+  box-shadow: 0 0 10px #00ffff;
+  transition: transform 0.3s ease;
 }
 
 .carousel-image-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+  transform: rotate(5deg) scale(1.1);
+  background: #222;
 }
 
 .carousel-image-container img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(0.9);
-  transition: filter 0.3s ease;
-}
-
-.carousel-image-container:hover img {
-  filter: brightness(1);
+  border-bottom: 2px solid #00ff00;
 }
 
 .carousel-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.7rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  color: #f8f8f8;
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: left;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  font-family: 'Montserrat';
-  font-weight: bold;
+  font-size: 0.7em;
+  color: #ffff00;
+  text-shadow: 1px 1px #ff00ff;
+  margin-top: 5px;
 }
 
+marquee {
+  font-size: 0.8em;
+  color: #ff00ff;
+  background: #000;
+  border: 2px dotted #00ffff;
+  padding: 4px;
+  margin: 10px 0;
+}
 
 @media (max-width: 700px) {
-  h1 { font-size: 2.2em; }
-  h2 { font-size: 1.1em; }
-  .carousel-section { max-width: 95%; }
+  body {
+    background-size: cover;
+  }
+  nav a {
+    font-size: 0.7em;
+  }
 }
 
