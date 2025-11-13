@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,81 +11,87 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="glass-panel">
-    <header class="header">
-      <div class="logo-container">
-        <img src="assets/atom.png" alt="ScienceRules Logo" class="logo">
-        <div>
-          <h1>ScienceRules</h1>
-          <h2 id="random-phrase">hi from the sciencerules team :D</h2>
-        </div>
-      </div>
-    </header>
 
-    <main class="content">
-      <nav class="nav">
-        <a href="/index.html">Home</a>
-        <a href="pages/domains.html">Alt Links</a>
-        <a href="pages/games.html">Games</a>
-        <a href="pages/shows.html">Shows & Movies</a>
-        <a href="https://discord.gg/aSqgnkPRyD" target="_blank" rel="noopener">Discord</a>
-      </nav>
-
-      <section class="carousel-section">
-        <h2>Featured Games</h2>
-        <div class="carousel" id="game-carousel"></div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      © 2025 ScienceRules — learning is fun, even when it’s unbl0cked
-    </footer>
+<header>
+  <div class="logo-container">
+    <img src="assets/atom.png" alt="ScienceRules Logo" class="logo">
+    <div>
+      <h1>ScienceRules</h1>
+      <h2 id="random-phrase">hi from the sciencerules team :D</h2> 
   </div>
+</header>
 
-  <script src="scripts/carousel.js"></script>
-  <script src="scripts/loading.js"></script>
-  <script src="scripts/mobile.js"></script>
+<nav>
+  <a href="/index.html">Home</a>
+  <a href="pages/domains.html">Alt Links</a>
+  <a href="pages/games.html">Games</a>
+  <a href="pages/shows.html">Shows & Movies</a>
+  <a href="https://discord.gg/aSqgnkPRyD" target="_blank" rel="noopener">Discord</a>
 
-  <script>
-    const phrases = [
-      "It's still learning if you learn about the games you play",
-      "Math class is better with a bit of ScienceRules",
-      "We have movies too, by the way",
-      "ScienceRules once a day keeps the homework away"
-    ];
+</nav>
 
-    const phraseElement = document.getElementById("random-phrase");
-    let currentPhrase = "";
-    let charIndex = 0;
-    let isDeleting = false;
+<section class="carousel-section">
+  <h2>Featured Games</h2>
+  <div class="carousel" id="game-carousel"></div>
+</section>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'b73e358431b3d98e6b87ef9e14804dc3',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/b73e358431b3d98e6b87ef9e14804dc3/invoke.js"></script>
 
-    function getNewPhrase(exclude) {
-      let newPhrase;
-      do { newPhrase = phrases[Math.floor(Math.random() * phrases.length)]; }
-      while (newPhrase === exclude);
-      return newPhrase;
-    }
+<script>
+const phrases = [
+  "It's still learning if you learn about the games you play",
+  "Math class is better with a bit of ScienceRules",
+  "We have movies too, by the way",
+  "ScienceRules once a day keeps the homework away"
+];
 
-    function typeLoop() {
-      if (!phraseElement) return;
-      if (!isDeleting && charIndex < currentPhrase.length) {
-        phraseElement.textContent = currentPhrase.substring(0,charIndex+1);
-        charIndex++;
-        setTimeout(typeLoop,50);
-      } else if (isDeleting && charIndex>0) {
-        phraseElement.textContent = currentPhrase.substring(0,charIndex-1);
-        charIndex--;
-        setTimeout(typeLoop,30);
-      } else {
-        if (!isDeleting) { isDeleting=true; setTimeout(typeLoop,1500); }
-        else { isDeleting=false; currentPhrase=getNewPhrase(currentPhrase); setTimeout(typeLoop,500);}
-      }
-    }
+const phraseElement = document.getElementById("random-phrase");
+let currentPhrase = "";
+let charIndex = 0;
+let isDeleting = false;
 
-    document.addEventListener("DOMContentLoaded",()=>{
-      currentPhrase=getNewPhrase();
-      typeLoop();
-    });
-  </script>
+function getNewPhrase(exclude) {
+  let newPhrase;
+  do { newPhrase = phrases[Math.floor(Math.random() * phrases.length)]; }
+  while (newPhrase === exclude);
+  return newPhrase;
+}
+
+function typeLoop() {
+  if (!phraseElement) return;
+  if (!isDeleting && charIndex < currentPhrase.length) {
+    phraseElement.textContent = currentPhrase.substring(0,charIndex+1);
+    charIndex++;
+    setTimeout(typeLoop,50);
+  } else if (isDeleting && charIndex>0) {
+    phraseElement.textContent = currentPhrase.substring(0,charIndex-1);
+    charIndex--;
+    setTimeout(typeLoop,30);
+  } else {
+    if (!isDeleting) { isDeleting=true; setTimeout(typeLoop,1500); }
+    else { isDeleting=false; currentPhrase=getNewPhrase(currentPhrase); setTimeout(typeLoop,500);}
+  }
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  currentPhrase=getNewPhrase();
+  typeLoop();
+});
+</script>
+
+
+<script src="scripts/carousel.js"></script>
+<script src="scripts/loading.js"></script>
+<script type='text/javascript' src='//pl27826438.effectivegatecpm.com/bc/1e/38/bc1e38e5a736c394d1eec55bbb963065.js'></script>
+<script src="scripts/mobile.js"></script>
+
 </body>
 </html>
