@@ -7,17 +7,18 @@
 <link rel="icon" type="image/png" href="assets/atom.png">
 <title>ScienceRules</title>
  <meta name="description" content="The best unbl0cked game site to fulfill your boredom at school! Pick from a huge selection of your favorite games.">
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 </head>
 <body>
 
 <header>
   <div class="logo-container">
-    <img src="assets/atom.png" alt="ScienceRules Logo" class="logo">
+    <img src="assets/atom.png" alt="ScienceRules Logo" class="logo" loading="lazy">
     <div>
       <h1>ScienceRules</h1>
-      <h2 id="random-phrase">hi from the sciencerules team :D</h2> 
+      <h2 id="random-phrase">hi from the sciencerules team :D</h2>
+    </div>
   </div>
 </header>
 
@@ -43,7 +44,7 @@
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/b73e358431b3d98e6b87ef9e14804dc3/invoke.js"></script>
+<script async type="text/javascript" src="//www.highperformanceformat.com/b73e358431b3d98e6b87ef9e14804dc3/invoke.js"></script>
 
 <script>
 const phrases = [
@@ -88,10 +89,10 @@ document.addEventListener("DOMContentLoaded",()=>{
 </script>
 
 
-<script src="scripts/carousel.js"></script>
-<script src="scripts/loading.js"></script>
-<script type='text/javascript' src='//pl27826438.effectivegatecpm.com/bc/1e/38/bc1e38e5a736c394d1eec55bbb963065.js'></script>
-<script src="scripts/mobile.js"></script>
+<script defer src="scripts/carousel.js"></script>
+<script defer src="scripts/loading.js"></script>
+<script async type='text/javascript' src='//pl27826438.effectivegatecpm.com/bc/1e/38/bc1e38e5a736c394d1eec55bbb963065.js'></script>
+<script defer src="scripts/mobile.js"></script>
 
 </body>
 </html>
