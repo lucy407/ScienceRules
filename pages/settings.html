@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScienceRules | Settings</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/clock.css">
+  <link rel="stylesheet" href="../css/features.css">
+  <link rel="icon" type="image/png" href="../assets/atom.png">
+  <style>
+    .settings-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(26, 28, 34, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .settings-section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: rgba(20, 20, 25, 0.6);
+      border-radius: 15px;
+      border: 1px solid rgba(90, 200, 250, 0.2);
+    }
+    
+    .settings-section h3 {
+      color: #5ac8fa;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .setting-item:last-child {
+      border-bottom: none;
+    }
+    
+    .setting-label {
+      color: #e0e0e0;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    
+    .setting-control {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .toggle-switch {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background: #333;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .toggle-switch.active {
+      background: #5ac8fa;
+    }
+    
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s;
+    }
+    
+    .toggle-switch.active::after {
+      transform: translateX(30px);
+    }
+    
+    input[type="number"], input[type="datetime-local"] {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1c22;
+      color: #e0e0e0;
+      font-size: 1em;
+      outline: none;
+      transition: border 0.3s;
+    }
+    
+    input[type="number"]:focus, input[type="datetime-local"]:focus {
+      border-color: #5ac8fa;
+      box-shadow: 0 0 8px rgba(90, 200, 250, 0.3);
+    }
+    
+    .btn {
+      padding: 12px 24px;
+      border-radius: 10px;
+      border: none;
+      background: #5ac8fa;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s;
+      margin: 5px;
+    }
+    
+    .btn:hover {
+      background: #49b7d6;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: #333;
+      color: #e0e0e0;
+    }
+    
+    .btn-secondary:hover {
+      background: #444;
+    }
+    
+    .preview-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .preview-clock {
+      font-size: 2.5em;
+      color: #5ac8fa;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 10px;
+    }
+    
+    .preview-date {
+      font-size: 1.2em;
+      color: #c0c0c0;
+    }
+    
+    .theme-preview {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .theme-preview:hover {
+      transform: scale(1.05);
+    }
+    
+    .theme-preview-box {
+      padding: 15px;
+      border-radius: 10px;
+      height: 80px;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .theme-preview.selected .theme-preview-box {
+      box-shadow: 0 0 20px rgba(90, 200, 250, 0.6);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <div>
+      <img src="../assets/atom.png" alt="ScienceRules Logo" class="logo" loading="lazy">
+      <div>
+        <h1>ScienceRules</h1>
+        <h2>Settings</h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="/index.html">Home</a>
+  <a href="/pages/domains.html">Alt Links</a>
+  <a href="/pages/games.html">Games</a>
+  <a href="/pages/shows.html">Shows & Movies</a>
+  <a href="/pages/settings.html">Settings</a>
+  <a href="https://discord.gg/aSqgnkPRyD" target="_blank" rel="noopener">Discord</a>
+</nav>
+
+<main class="settings-container">
+  <div class="settings-section">
+    <h3>Clock Settings</h3>
+    
+    <div class="setting-item">
+      <div class="setting-label">
+        <strong>Time Format</strong>
+        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">Choose between 12-hour or 24-hour format</div>
+      </div>
+      <div class="setting-control">
+        <label style="color: #e0e0e0; cursor: pointer;">
+          <input type="radio" name="timeFormat" value="24" id="format24" style="margin-right: 5px;">
+          24-hour
+        </label>
+        <label style="color: #e0e0e0; cursor: pointer; margin-left: 15px;">
+          <input type="radio" name="timeFormat" value="12" id="format12" style="margin-right: 5px;">
+          12-hour
+        </label>
+      </div>
+    </div>
+    
+    <div class="setting-item">
+      <div class="setting-label">
+        <strong>Show Date</strong>
+        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">Display date below the clock</div>
+      </div>
+      <div class="setting-control">
+        <div class="toggle-switch" id="showDateToggle"></div>
+      </div>
+    </div>
+    
+    <div class="setting-item">
+      <div class="setting-label">
+        <strong>Timezone / Area</strong>
+        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">Select your timezone or manually adjust offset</div>
+      </div>
+      <div class="setting-control">
+        <select id="timezoneSelect" style="padding: 10px 15px; border-radius: 8px; border: 1px solid #333; background: #1a1c22; color: #e0e0e0; font-size: 1em; outline: none; margin-right: 10px;">
+          <option value="auto">Auto (Browser Timezone)</option>
+          <option value="UTC">UTC (Coordinated Universal Time)</option>
+          <option value="EST">EST (Eastern Standard Time) - UTC-5</option>
+          <option value="CST">CST (Central Standard Time) - UTC-6</option>
+          <option value="MST">MST (Mountain Standard Time) - UTC-7</option>
+          <option value="PST">PST (Pacific Standard Time) - UTC-8</option>
+          <option value="GMT">GMT (Greenwich Mean Time) - UTC+0</option>
+          <option value="CET">CET (Central European Time) - UTC+1</option>
+          <option value="EET">EET (Eastern European Time) - UTC+2</option>
+          <option value="JST">JST (Japan Standard Time) - UTC+9</option>
+          <option value="AEST">AEST (Australian Eastern Time) - UTC+10</option>
+          <option value="custom">Custom Offset</option>
+        </select>
+        <input type="number" id="timezoneOffset" value="0" min="-720" max="720" step="60" style="display: none;">
+      </div>
+    </div>
+    
+    <div class="setting-item">
+      <div class="setting-label">
+        <strong>Custom Time</strong>
+        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">Set a custom time (leave empty to use system time)</div>
+      </div>
+      <div class="setting-control">
+        <input type="datetime-local" id="customTime">
+        <button class="btn btn-secondary" id="clearCustomTime">Clear</button>
+      </div>
+    </div>
+    
+    <div class="preview-box">
+      <div class="preview-clock" id="previewClock">00:00:00</div>
+      <div class="preview-date" id="previewDate"></div>
+    </div>
+    
+    <div style="margin-top: 25px; text-align: center;">
+      <button class="btn" id="saveSettings">Save Settings</button>
+      <button class="btn btn-secondary" id="resetSettings">Reset to Default</button>
+    </div>
+  </div>
+  
+  <div class="settings-section">
+    <h3>Theme Settings</h3>
+    
+    <div class="setting-item">
+      <div class="setting-label">
+        <strong>Site Theme</strong>
+        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">Choose a theme for the entire website</div>
+      </div>
+      <div class="setting-control">
+        <select id="themeSelect" style="padding: 10px 15px; border-radius: 8px; border: 1px solid #333; background: #1a1c22; color: #e0e0e0; font-size: 1em; outline: none; min-width: 200px;">
+        </select>
+      </div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
+      <div class="theme-preview" data-theme="default">
+        <div class="theme-preview-box" style="background: linear-gradient(145deg, #0c0d11, #181b23); border: 2px solid #5ac8fa;">
+          <div style="background: #1a1c22; height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #5ac8fa; height: 20px; border-radius: 3px;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Classic</div>
+      </div>
+      <div class="theme-preview" data-theme="dark">
+        <div class="theme-preview-box" style="background: linear-gradient(145deg, #000000, #1a1a1a); border: 2px solid #ffffff;">
+          <div style="background: #0d0d0d; height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #ffffff; height: 20px; border-radius: 3px;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Void Black</div>
+      </div>
+      <div class="theme-preview" data-theme="purple">
+        <div class="theme-preview-box" style="background: linear-gradient(145deg, #1a0b2e, #2d1b4e); border: 2px solid #a855f7;">
+          <div style="background: #2a1f3d; height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #a855f7; height: 20px; border-radius: 3px;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Mystic Purple</div>
+      </div>
+      <div class="theme-preview" data-theme="green">
+        <div class="theme-preview-box" style="background: linear-gradient(145deg, #064e3b, #065f46); border: 2px solid #10b981;">
+          <div style="background: #0d4f3f; height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #10b981; height: 20px; border-radius: 3px;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Emerald Forest</div>
+      </div>
+      <div class="theme-preview" data-theme="red">
+        <div class="theme-preview-box" style="background: linear-gradient(145deg, #7f1d1d, #991b1b); border: 2px solid #ef4444;">
+          <div style="background: #991b1b; height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #ef4444; height: 20px; border-radius: 3px;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Crimson Night</div>
+      </div>
+      <div class="theme-preview" data-theme="vista">
+        <div class="theme-preview-box" style="background: linear-gradient(135deg, #1e3c72, #2a5298, #7e8ba3); border: 2px solid #0078d4; position: relative; overflow: hidden;">
+          <div style="background: rgba(255, 255, 255, 0.15); height: 40px; margin-bottom: 10px; border-radius: 5px; backdrop-filter: blur(10px);"></div>
+          <div style="background: #0078d4; height: 20px; border-radius: 3px;"></div>
+          <div style="position: absolute; top: 0; right: 0; padding: 2px 6px; background: rgba(0, 120, 212, 0.3); font-size: 0.7em; border-radius: 3px;">ANIMATED</div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Windows 7 Aero</div>
+      </div>
+      <div class="theme-preview" data-theme="midnight">
+        <div class="theme-preview-box" style="background: #000000; border: 2px solid #ffffff; position: relative; overflow: hidden;">
+          <div style="background: rgba(20, 20, 40, 0.8); height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #ffffff; height: 20px; border-radius: 3px;"></div>
+          <div style="position: absolute; top: 2px; left: 2px; width: 2px; height: 2px; background: white; border-radius: 50%;"></div>
+          <div style="position: absolute; top: 5px; right: 5px; width: 1px; height: 1px; background: white; border-radius: 50%;"></div>
+          <div style="position: absolute; bottom: 10px; left: 10px; width: 1.5px; height: 1.5px; background: white; border-radius: 50%;"></div>
+          <div style="position: absolute; top: 0; right: 0; padding: 2px 6px; background: rgba(255, 255, 255, 0.3); font-size: 0.7em; border-radius: 3px;">ANIMATED</div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Midnight Starlight</div>
+      </div>
+      <div class="theme-preview" data-theme="cyberpunk">
+        <div class="theme-preview-box" style="background: linear-gradient(135deg, #000000, #1a0033); border: 2px solid #00ffff; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); position: relative; overflow: hidden;">
+          <div style="background: rgba(26, 0, 51, 0.9); height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #00ffff; height: 20px; border-radius: 3px; box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);"></div>
+          <div style="position: absolute; top: 0; right: 0; padding: 2px 6px; background: rgba(0, 255, 255, 0.3); font-size: 0.7em; border-radius: 3px;">ANIMATED</div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Neon Cyberpunk</div>
+      </div>
+      <div class="theme-preview" data-theme="aurora">
+        <div class="theme-preview-box" style="background: linear-gradient(135deg, #0a0e27, #1a1f3a, #2d1b4e); border: 2px solid #00ff88; position: relative; overflow: hidden;">
+          <div style="background: rgba(26, 31, 58, 0.8); height: 40px; margin-bottom: 10px; border-radius: 5px;"></div>
+          <div style="background: #00ff88; height: 20px; border-radius: 3px;"></div>
+          <div style="position: absolute; top: 0; right: 0; padding: 2px 6px; background: rgba(0, 255, 136, 0.3); font-size: 0.7em; border-radius: 3px;">ANIMATED</div>
+        </div>
+        <div style="text-align: center; margin-top: 10px; color: #e0e0e0; font-weight: 500;">Northern Lights</div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 25px; text-align: center;">
+      <button class="btn" id="saveTheme">Apply Theme</button>
+    </div>
+  </div>
+</main>
+
+<script src="../scripts/cookieConsent.js"></script>
+<script src="../scripts/themes.js"></script>
+<script src="../scripts/clock.js"></script>
+<script src="../scripts/features.js"></script>
+<script src="../scripts/loading.js"></script>
+<script src="../scripts/mobile.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  loadClockSettings();
+  if (typeof loadTheme === 'function') loadTheme();
+  
+  const format24Radio = document.getElementById('format24');
+  const format12Radio = document.getElementById('format12');
+  const showDateToggle = document.getElementById('showDateToggle');
+  const timezoneSelect = document.getElementById('timezoneSelect');
+  const timezoneOffset = document.getElementById('timezoneOffset');
+  const customTime = document.getElementById('customTime');
+  const clearCustomTime = document.getElementById('clearCustomTime');
+  const saveBtn = document.getElementById('saveSettings');
+  const resetBtn = document.getElementById('resetSettings');
+  const previewClock = document.getElementById('previewClock');
+  const previewDate = document.getElementById('previewDate');
+  const themeSelect = document.getElementById('themeSelect');
+  const saveThemeBtn = document.getElementById('saveTheme');
+  
+  const timezoneMap = {
+    'auto': 0,
+    'UTC': 0,
+    'EST': -300,
+    'CST': -360,
+    'MST': -420,
+    'PST': -480,
+    'GMT': 0,
+    'CET': 60,
+    'EET': 120,
+    'JST': 540,
+    'AEST': 600
+  };
+  
+  if (clockSettings.format24) {
+    format24Radio.checked = true;
+  } else {
+    format12Radio.checked = true;
+  }
+  
+  if (clockSettings.showDate) {
+    showDateToggle.classList.add('active');
+  }
+  
+  const currentOffset = clockSettings.timezoneOffset;
+  const timezoneKey = Object.keys(timezoneMap).find(key => timezoneMap[key] === currentOffset);
+  if (timezoneKey && timezoneKey !== 'custom') {
+    timezoneSelect.value = timezoneKey;
+    timezoneOffset.style.display = 'none';
+  } else {
+    timezoneSelect.value = 'custom';
+    timezoneOffset.style.display = 'inline-block';
+    timezoneOffset.value = currentOffset;
+  }
+  
+  timezoneSelect.addEventListener('change', () => {
+    if (timezoneSelect.value === 'custom') {
+      timezoneOffset.style.display = 'inline-block';
+      timezoneOffset.value = clockSettings.timezoneOffset || 0;
+    } else {
+      timezoneOffset.style.display = 'none';
+      clockSettings.timezoneOffset = timezoneMap[timezoneSelect.value] || 0;
+      updatePreview();
+    }
+  });
+  
+  timezoneOffset.addEventListener('input', () => {
+    clockSettings.timezoneOffset = parseInt(timezoneOffset.value) || 0;
+    updatePreview();
+  });
+  
+  if (clockSettings.customTime) {
+    const date = new Date(clockSettings.customTime);
+    customTime.value = date.toISOString().slice(0, 16);
+  }
+  
+  function updatePreview() {
+    const tempSettings = { ...clockSettings };
+    tempSettings.format24 = format24Radio.checked;
+    tempSettings.showDate = showDateToggle.classList.contains('active');
+    tempSettings.timezoneOffset = parseInt(timezoneOffset.value) || 0;
+    
+    if (customTime.value) {
+      tempSettings.customTime = new Date(customTime.value).toISOString();
+    } else {
+      tempSettings.customTime = null;
+    }
+    
+    const now = tempSettings.customTime ? new Date(tempSettings.customTime) : new Date();
+    if (tempSettings.timezoneOffset !== 0) {
+      now.setMinutes(now.getMinutes() + tempSettings.timezoneOffset);
+    }
+    
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    if (!tempSettings.format24) {
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      previewClock.textContent = `${hours.toString().padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+    } else {
+      previewClock.textContent = `${hours.toString().padStart(2, '0')}:${minutes}:${seconds}`;
+    }
+    
+    if (tempSettings.showDate) {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      previewDate.textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+    } else {
+      previewDate.textContent = '';
+    }
+  }
+  
+  showDateToggle.addEventListener('click', () => {
+    showDateToggle.classList.toggle('active');
+    updatePreview();
+  });
+  
+  format24Radio.addEventListener('change', updatePreview);
+  format12Radio.addEventListener('change', updatePreview);
+  timezoneOffset.addEventListener('input', updatePreview);
+  customTime.addEventListener('change', updatePreview);
+  
+  clearCustomTime.addEventListener('click', () => {
+    customTime.value = '';
+    updatePreview();
+  });
+  
+  saveBtn.addEventListener('click', () => {
+    clockSettings.format24 = format24Radio.checked;
+    clockSettings.showDate = showDateToggle.classList.contains('active');
+    
+    if (timezoneSelect.value === 'custom') {
+      clockSettings.timezoneOffset = parseInt(timezoneOffset.value) || 0;
+    } else {
+      clockSettings.timezoneOffset = timezoneMap[timezoneSelect.value] || 0;
+    }
+    
+    if (customTime.value) {
+      clockSettings.customTime = new Date(customTime.value).toISOString();
+    } else {
+      clockSettings.customTime = null;
+    }
+    
+    saveClockSettings();
+    
+    if (window.showToast) {
+      window.showToast('Settings saved! Refresh to see changes.', 'success');
+    } else {
+      alert('Settings saved! Refresh to see changes.');
+    }
+  });
+  
+  if (themeSelect && window.themes) {
+    Object.keys(window.themes).forEach(themeKey => {
+      const option = document.createElement('option');
+      option.value = themeKey;
+      option.textContent = window.themes[themeKey].name + (window.themes[themeKey].type === 'animated' ? ' (Animated)' : '');
+      if (window.currentTheme === themeKey) option.selected = true;
+      themeSelect.appendChild(option);
+    });
+    
+    document.querySelectorAll('.theme-preview').forEach(preview => {
+      preview.addEventListener('click', () => {
+        const theme = preview.dataset.theme;
+        themeSelect.value = theme;
+        if (window.applyTheme) window.applyTheme(theme);
+      });
+    });
+    
+    themeSelect.addEventListener('change', () => {
+      if (window.applyTheme) window.applyTheme(themeSelect.value);
+    });
+    
+    if (saveThemeBtn) {
+      saveThemeBtn.addEventListener('click', () => {
+        if (window.saveTheme && window.applyTheme) {
+          window.saveTheme(themeSelect.value);
+          window.applyTheme(themeSelect.value);
+          if (window.showToast) {
+            window.showToast('Theme applied!', 'success');
+          } else {
+            alert('Theme applied!');
+          }
+        }
+      });
+    }
+  }
+  
+  resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all settings to default?')) {
+      clockSettings = {
+        format24: true,
+        showDate: true,
+        timezoneOffset: 0,
+        customTime: null
+      };
+      
+      format24Radio.checked = true;
+      showDateToggle.classList.add('active');
+      timezoneOffset.value = 0;
+      customTime.value = '';
+      
+      saveClockSettings();
+      updatePreview();
+      
+      if (window.showToast) {
+        window.showToast('Settings reset to default!', 'info');
+      } else {
+        alert('Settings reset to default!');
+      }
+    }
+  });
+  
+  updatePreview();
+  setInterval(updatePreview, 1000);
+});
+</script>
+</body>
+</html>
+

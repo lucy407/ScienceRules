@@ -4,409 +4,466 @@
     "description": "Fast-paced 3D runner where you dodge obstacles and keep your ball from falling off the edge at insane speed.",
     "url": "../games/Slope.html",
     "image": "../assets/slope.png",
-    "category": "Action"
+    "category": "Action",
+    "id": "slope"
   },
   {
     "title": "Angry Birds",
     "description": "Launch birds with a slingshot to knock down pig towers and bring justice to the stolen eggs!",
     "url": "../games/Angry Birds.html",
     "image": "../assets/angrybirds.png",
-    "category": "Puzzle"
+    "category": "Puzzle",
+    "id": "angry-birds"
   },
   {
     "title": "1v1.LoL",
     "description": "A third-person shooter and building simulator where you fight opponents and construct defenses in real time.",
     "url": "../games/1v1.LoL.html",
     "image": "../assets/1v1lol.png",
-    "category": "Shooter"
+    "category": "Shooter",
+    "id": "1v1-lol"
   },
   {
     "title": "Bad Parenting",
     "description": "A psychological horror game where you face Mr. Red Face and uncover a disturbing truth behind his existence.",
     "url": "../games/Bad Parenting 1.html",
     "image": "../assets/badparenting.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "bad-parenting"
   },
   {
     "title": "BitLife",
     "description": "Make life choices from birth to death as you shape careers, relationships, and destinies in this life simulator.",
     "url": "../games/BitLife.html",
     "image": "../assets/bitlife.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "bitlife"
   },
   {
     "title": "Basket Random",
     "description": "A silly, pixelated basketball game where randomness rules and hilarious moments happen every match.",
     "url": "../games/Basket Random.html",
     "image": "../assets/basketrandom.png",
-    "category": "Sports"
+    "category": "Sports",
+    "id": "basket-random"
   },
   {
     "title": "Chiikawa Puzzle",
     "description": "Recreate Chiikawa from memory by dragging puzzle pieces into place and see your funny results unfold.",
     "url": "../games/Chiikawa Puzzle.html",
     "image": "../assets/Chiikawapuzzle.png",
-    "category": "Puzzle"
+    "category": "Puzzle",
+    "id": "chiikawa-puzzle"
   },
   {
     "title": "Bloxorz",
     "description": "Control a rectangular block and roll it onto the target hole without falling off in this tricky puzzle game.",
     "url": "../games/Bloxorz.html",
     "image": "../assets/Bloxorz.png",
-    "category": "Puzzle"
+    "category": "Puzzle",
+    "id": "bloxorz"
   },
   {
     "title": "Minecraft",
     "description": "Explore, build, and survive in a blocky sandbox world full of creativity, danger, and endless adventures.",
     "url": "../games/Minecraft.html",
     "image": "../assets/Minecraft.png",
-    "category": "Sandbox"
+    "category": "Sandbox",
+    "id": "minecraft"
   },
   {
     "title": "Yume Nikki",
     "description": "Explore surreal dream worlds as a reclusive girl, collecting strange effects in this haunting adventure.",
     "url": "../games/Yume Nikki.html",
     "image": "../assets/yumenikki.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "yume-nikki"
   },
   {
     "title": "Learn To Fly",
     "description": "Launch your penguin sky-high, upgrade your gear, and soar farther in this fun, physics-based flying game.",
     "url": "../games/Learn to Fly.html",
     "image": "../assets/learntofly.png",
-    "category": "Arcade"
+    "category": "Arcade",
+    "id": "learn-to-fly"
   },
   {
     "title": "Granny",
     "description": "Escape a creepy house without being caught by Granny using stealth, puzzles, and quick thinking to survive.",
     "url": "../games/Granny.html",
     "image": "../assets/Granny.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "granny"
   },
   {
     "title": "Cut the Rope",
     "description": "Feed candy to Om Nom by cutting ropes and triggering clever chain reactions in this physics puzzle game.",
     "url": "../games/Cut the Rope.html",
     "image": "../assets/cuttherope.png",
-    "category": "Puzzle"
+    "category": "Puzzle",
+    "id": "cut-the-rope"
   },
   {
     "title": "Friday Night Funkin'",
     "description": "Hit notes on beat to win rap battles and charm your crush in this quirky, rhythm-based music game.",
     "url": "../games/Friday Night Funkin.html",
     "image": "../assets/fridaynightfunkin.png",
-    "category": "Rhythm"
+    "category": "Rhythm",
+    "id": "friday-night-funkin"
   },
   {
     "title": "Cookie Clicker",
     "description": "Click to bake cookies and buy upgrades as your cookie empire grows into an unstoppable production machine.",
     "url": "../games/Cookie Clicker.html",
     "image": "../assets/cookieclicker.png",
-    "category": "Idle"
+    "category": "Idle",
+    "id": "cookie-clicker"
   },
   {
     "title": "Osu!",
     "description": "Click, slide, and spin to the beat in this lightning-fast rhythm game packed with anime-style energy.",
     "url": "../games/osu!.html",
     "image": "../assets/osu.png",
-    "category": "Rhythm"
+    "category": "Rhythm",
+    "id": "osu"
   },
   {
     "title": "BLOODMONEY",
     "description": "Click to earn money for surgery, but each dollar comes from hurting Harvey in this dark horror clicker.",
     "url": "../games/BLOODMONEY!.html",
     "image": "../assets/bloodmoney.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "bloodmoney"
   },
   {
     "title": "Doki Doki Literature Club",
     "description": "A cheerful dating sim that turns into a psychological horror full of twists, glitches, and eerie surprises.",
     "url": "../games/ddlc.html",
     "image": "../assets/ddlc.jpg",
-    "category": "Story"
+    "category": "Story",
+    "id": "doki-doki-literature-club"
   },
   {
     "title": "Doodle Jump",
     "description": "Jump endlessly upward, shoot monsters, and dodge traps as The Doodler in this addictively fun platformer.",
     "url": "../games/Doodle Jump.html",
     "image": "../assets/doodlejump.png",
-    "category": "Arcade"
+    "category": "Arcade",
+    "id": "doodle-jump"
   },
   {
     "title": "The Binding of Isaac: Wrath of the Lamb",
     "description": "Battle grotesque monsters in a dark, biblical roguelike filled with random dungeons and twisted secrets.",
     "url": "../games/TBOIWOTL.html",
     "image": "../assets/tboiwotl.png",
-    "category": "Roguelike"
+    "category": "Roguelike",
+    "id": "the-binding-of-isaac-wrath-of-the-lamb"
   },
   {
-    "title": "Class of ’09",
+    "title": "Class of \u201909",
     "description": "A darkly comedic visual novel set in the early 2000s high school scene filled with edgy humor and chaos.",
     "url": "../games/Class of 09.html",
     "image": "../assets/classof09.png",
-    "category": "Story"
+    "category": "Story",
+    "id": "class-of-\u201909"
   },
   {
     "title": "Friday Night Funkin vs Shaggy Mod",
     "description": "Face off against Shaggy in an intense rhythm showdown full of fast beats and meme energy galore.",
     "url": "../games/Friday Night Funkin vs Shaggy.html",
     "image": "../assets/shaggy.png",
-    "category": "Rhythm"
+    "category": "Rhythm",
+    "id": "friday-night-funkin-vs-shaggy-mod"
   },
   {
     "title": "Friday Night Funkin' Creepypasta Mod",
     "description": "Enter a creepypasta-inspired rhythm battle full of eerie songs, spooky visuals, and cursed challenges.",
     "url": "../games/Friday Night Funkin'_ Creepypasta JP.html",
     "image": "../assets/creepypasta.jpeg",
-    "category": "Rhythm"
+    "category": "Rhythm",
+    "id": "friday-night-funkin-creepypasta-mod"
   },
   {
     "title": "Papa's Bakeria",
     "description": "Manage a bakery, take orders, and bake perfect pies in this nostalgic and addictive flash classic.",
     "url": "../games/Papa's Bakeria.html",
     "image": "../assets/pbake.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-bakeria"
   },
   {
     "title": "Papa's Burgeria",
     "description": "Grill burgers, stack toppings, and keep customers happy in this beloved time-management flash game.",
     "url": "../games/Papa's Burgeria.html",
     "image": "../assets/pburger.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-burgeria"
   },
   {
     "title": "Papa's Cheeseria",
     "description": "Cook cheesy sandwiches to perfection and manage orders efficiently in this fan-favorite flash title.",
     "url": "../games/Papa's Cheeseria.html",
     "image": "../assets/pcheese.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-cheeseria"
   },
   {
     "title": "Papa's Cupcakeria",
     "description": "Bake, frost, and decorate cupcakes for picky customers in this sweet and colorful flash experience.",
     "url": "../games/Papa's Cupcakeria.html",
     "image": "../assets/pcupcake.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-cupcakeria"
   },
   {
     "title": "Papa's Donuteria",
     "description": "Fry, fill, and decorate donuts while managing orders and upgrades in this satisfying flash classic.",
     "url": "../games/Papa's Donuteria.html",
     "image": "../assets/pdonut.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-donuteria"
   },
   {
     "title": "Papa's Freezeria",
     "description": "Blend and top frozen treats while running your seaside ice cream shop in this nostalgic flash hit.",
     "url": "../games/Papa's Freezeria.html",
     "image": "../assets/pfreeze.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-freezeria"
   },
   {
     "title": "Papa's Hot Doggeria",
     "description": "Grill hot dogs, add toppings, and keep fans fed at the ballpark in this fun flash restaurant game.",
     "url": "../games/Papa's Doggeria.html",
     "image": "../assets/photdog.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-hot-doggeria"
   },
   {
     "title": "Papa's Pancakeria",
     "description": "Stack pancakes, pour syrup, and serve delicious breakfasts to customers in this cozy flash game.",
     "url": "../games/Papa's Pancakeria.html",
     "image": "../assets/ppancake.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-pancakeria"
   },
   {
     "title": "Papa's Pastaria",
     "description": "Boil pasta, make sauce, and serve up perfect plates of Italian dishes in this restaurant sim classic.",
     "url": "../games/Papa's Pastaria.html",
     "image": "../assets/ppasta.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-pastaria"
   },
   {
     "title": "Papa's Pizzaria",
     "description": "Top, bake, and cut pizzas to perfection for demanding customers in this nostalgic flash cooking game.",
     "url": "../games/Papa's Pizaria.html",
     "image": "../assets/ppizza.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-pizzaria"
   },
   {
     "title": "Papa's Scooperia",
     "description": "Scoop cookie dough and ice cream to build tasty desserts while keeping your customers satisfied.",
     "url": "../games/Papa's Scooperia.html",
     "image": "../assets/pscoop.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-scooperia"
   },
   {
     "title": "Papa's Sushiria",
     "description": "Roll sushi, pour tea, and impress your hungry guests in this charming flash restaurant management game.",
     "url": "../games/Papa's Sushiria.html",
     "image": "../assets/psushi.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-sushiria"
   },
   {
     "title": "Papa's Taco Mia",
     "description": "Cook, fill, and wrap tacos for customers in this fast-paced, food-filled classic flash restaurant sim.",
     "url": "../games/Papa's Taco Mia.html",
     "image": "../assets/ptaco.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-taco-mia"
   },
   {
     "title": "Papa's Wingeria",
     "description": "Fry chicken wings, add sauces, and serve them with style in this fun and nostalgic flash cooking game.",
     "url": "../games/Papa's Wingeria.html",
     "image": "../assets/pwing.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "papas-wingeria"
   },
   {
     "title": "Lacey's Flash Games",
-    "description": "Play as Lacey exploring a cheerful kids’ website that hides disturbing secrets beneath its surface.",
+    "description": "Play as Lacey exploring a cheerful kids\u2019 website that hides disturbing secrets beneath its surface.",
     "url": "../games/Lacey's Flash Games.html",
     "image": "../assets/lfg.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "laceys-flash-games"
   },
   {
     "title": "Getting Over It with Bennett Foddy",
     "description": "Use a hammer to climb mountains of junk and test your patience in this brutally frustrating game.",
     "url": "../games/Getting Over It with Bennett Foddy.html",
     "image": "../assets/goiwbf.png",
-    "category": "Puzzle"
+    "category": "Puzzle",
+    "id": "getting-over-it-with-bennett-foddy"
   },
   {
     "title": "Plants vs Zombies",
     "description": "Grow plants and use their powers to defend your home from endless waves of silly but deadly zombies.",
     "url": "../games/Plants vs Zombies.html",
     "image": "../assets/pvz.png",
-    "category": "Action"
+    "category": "Action",
+    "id": "plants-vs-zombies"
   },
   {
     "title": "Pokemon Emerald",
-    "description": "Relive a classic Pokémon journey, catching creatures and battling trainers across the Hoenn region.",
+    "description": "Relive a classic Pok\u00e9mon journey, catching creatures and battling trainers across the Hoenn region.",
     "url": "../games/Pokemon Emerald.html",
     "image": "../assets/pokeem'.png",
-    "category": "Action"
+    "category": "Action",
+    "id": "pokemon-emerald"
   },
   {
     "title": "Pokemon Red",
-    "description": "Experience the original Pokémon adventure and become a champion by catching and training powerful teams.",
+    "description": "Experience the original Pok\u00e9mon adventure and become a champion by catching and training powerful teams.",
     "url": "../games/Pokemon Red.html",
     "image": "../assets/pokered.png",
-    "category": "Action"
+    "category": "Action",
+    "id": "pokemon-red"
   },
   {
     "title": "Pou",
     "description": "Feed, clean, and care for your alien pet Pou while dressing it up with fun outfits and accessories.",
     "url": "../games/Pou.html",
     "image": "../assets/pouwow.png",
-    "category": "Simulation"
+    "category": "Simulation",
+    "id": "pou"
   },
   {
     "title": "Slender: The 8 Pages",
     "description": "Explore the dark woods, collect all eight pages, and avoid the terrifying Slenderman lurking nearby.",
     "url": "../games/Slender_ The 8 Pages.html",
     "image": "../assets/sep.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "slender-the-8-pages"
   },
   {
     "title": "Snowbattle.io",
     "description": "Roll giant snowballs, throw them at enemies, and dominate the icy arena in this chaotic winter brawler.",
     "url": "../games/Snowbattle.io.html",
     "image": "../assets/sbio.png",
-    "category": "Action"
+    "category": "Action",
+    "id": "snowbattle-io"
   },
   {
     "title": "Amanda the Adventurer",
-    "description": "Watch old kids’ show tapes that twist into terrifying experiences as Amanda reveals dark secrets on screen.",
+    "description": "Watch old kids\u2019 show tapes that twist into terrifying experiences as Amanda reveals dark secrets on screen.",
     "url": "../games/Amanda the Adventurer.html",
     "image": "../assets/ata.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "amanda-the-adventurer"
   },
   {
     "title": "Andy's Apple Farm",
     "description": "Play as Andy exploring a retro farm game that slowly unravels into eerie glitches and hidden horrors beneath the cheerful surface.",
     "url": "../games/Andy's Apple Farm.html",
     "image": "../assets/aaf.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "andys-apple-farm"
   },
   {
     "title": "Bendy and the Ink Machine",
     "description": "Explore a deserted animation studio where ink comes to life and uncover the dark secrets behind its cartoon creations.",
     "url": "../games/Bendy and the Ink Machine.html",
     "image": "../assets/bati.png",
-    "category": "Horror"
+    "category": "Horror",
+    "id": "bendy-and-the-ink-machine"
   },
   {
-  "title": "DELTARUNE",
-  "description": "Embark on a strange journey with Kris, Susie, and Ralsei through a dark world filled with charm, danger, and heartfelt choices.",
-  "url": "../games/DELTARUNE.html",
-  "image": "../assets/deltarune.jpg",
-  "category": "Story"
-},
-{
-  "title": "Hotline Miami",
-  "description": "Slash and shoot your way through neon-soaked levels filled with brutal combat, surreal storytelling, and relentless synthwave energy.",
-  "url": "../games/Hotline Miami.html",
-  "image": "../assets/hm.jpg",
-  "category": "Action"
-},
-{
-  "title": "Kindergarten 1",
-  "description": "Navigate a twisted elementary school full of dark humor, deadly secrets, and bizarre characters in this disturbing adventure.",
-  "url": "../games/Kindergarten 1.html",
-  "image": "../assets/kg1.jpg",
-  "category": "Story"
-},
-{
-  "title": "Kindergarten 2",
-  "description": "Return for another chaotic school day packed with new students, twisted missions, and even darker secrets to uncover.",
-  "url": "../games/Kindergarten 2.html",
-  "image": "../assets/kg2.jpg",
-  "category": "Story"
-},
-{
-  "title": "Hungry Pumpkin",
-  "description": "Serve food to a demanding pumpkin who only eats what he wants in this weirdly addictive retro flash classic.",
-  "url": "../games/Hungry Pumpkin.html",
-  "image": "../assets/pumpkin.jpg",
-  "category": "Arcade"
-},
-{
-  "title": "Clash Royale",
-  "description": "Collect cards, build powerful decks, and battle opponents in real-time strategy duels featuring your favorite Clash characters.",
-  "url": "../games/Clash Royale.html",
-  "image": "../assets/clashroyale.jpg",
-  "category": "Strategy",
-  "gooseblock": true
-},
-{
-  "title": "Fortnite",
-  "description": "Drop into massive battles, build structures on the fly, and fight to be the last one standing in this iconic battle royale.",
-  "url": "../games/Fortnite.html",
-  "image": "../assets/fortnite.jpg",
-  "category": "Shooter",
-  "gooseblock": true
-},
-{
-  "title": "Roblox",
-  "description": "Create, play, and explore millions of user-made worlds filled with endless games, adventures, and community creativity.",
-  "url": "../games/Roblox.html",
-  "image": "../assets/roblox.jpg",
-  "category": "Sandbox",
-  "gooseblock": true
-},
-{
+    "title": "DELTARUNE",
+    "description": "Embark on a strange journey with Kris, Susie, and Ralsei through a dark world filled with charm, danger, and heartfelt choices.",
+    "url": "../games/DELTARUNE.html",
+    "image": "../assets/deltarune.jpg",
+    "category": "Story",
+    "id": "deltarune"
+  },
+  {
+    "title": "Hotline Miami",
+    "description": "Slash and shoot your way through neon-soaked levels filled with brutal combat, surreal storytelling, and relentless synthwave energy.",
+    "url": "../games/Hotline Miami.html",
+    "image": "../assets/hm.jpg",
+    "category": "Action",
+    "id": "hotline-miami"
+  },
+  {
+    "title": "Kindergarten 1",
+    "description": "Navigate a twisted elementary school full of dark humor, deadly secrets, and bizarre characters in this disturbing adventure.",
+    "url": "../games/Kindergarten 1.html",
+    "image": "../assets/kg1.jpg",
+    "category": "Story",
+    "id": "kindergarten-1"
+  },
+  {
+    "title": "Kindergarten 2",
+    "description": "Return for another chaotic school day packed with new students, twisted missions, and even darker secrets to uncover.",
+    "url": "../games/Kindergarten 2.html",
+    "image": "../assets/kg2.jpg",
+    "category": "Story",
+    "id": "kindergarten-2"
+  },
+  {
+    "title": "Hungry Pumpkin",
+    "description": "Serve food to a demanding pumpkin who only eats what he wants in this weirdly addictive retro flash classic.",
+    "url": "../games/Hungry Pumpkin.html",
+    "image": "../assets/pumpkin.jpg",
+    "category": "Arcade",
+    "id": "hungry-pumpkin"
+  },
+  {
+    "title": "Clash Royale",
+    "description": "Collect cards, build powerful decks, and battle opponents in real-time strategy duels featuring your favorite Clash characters.",
+    "url": "../games/Clash Royale.html",
+    "image": "../assets/clashroyale.jpg",
+    "category": "Strategy",
+    "gooseblock": true,
+    "id": "clash-royale"
+  },
+  {
+    "title": "Fortnite",
+    "description": "Drop into massive battles, build structures on the fly, and fight to be the last one standing in this iconic battle royale.",
+    "url": "../games/Fortnite.html",
+    "image": "../assets/fortnite.jpg",
+    "category": "Shooter",
+    "gooseblock": true,
+    "id": "fortnite"
+  },
+  {
+    "title": "Roblox",
+    "description": "Create, play, and explore millions of user-made worlds filled with endless games, adventures, and community creativity.",
+    "url": "../games/Roblox.html",
+    "image": "../assets/roblox.jpg",
+    "category": "Sandbox",
+    "gooseblock": true,
+    "id": "roblox"
+  },
+  {
     "title": "Retro Bowl",
     "description": "Retro Bowl is a classic-style football management game combining nostalgic pixel art with modern strategy. build your team, call plays, and lead your franchise to championship glory.",
     "url": "../games/Retro Bowl.html",
     "image": "../assets/retrobowl.png",
-    "category": "Arcade"
-},
-{
-  "title": "DOOM",
-  "description": "DOOM is a fast-paced first-person shooter where you battle hordes of demons from Hell using powerful weapons and brutal combat. Known for its intense action and heavy metal atmosphere, it’s a cornerstone of gaming history.",
-  "url": "../games/DOOM.html",
-  "image": "../assets/doom.png",
-  "category": "Shooter"
-}
-
+    "category": "Arcade",
+    "id": "retro-bowl"
+  },
+  {
+    "title": "DOOM",
+    "description": "DOOM is a fast-paced first-person shooter where you battle hordes of demons from Hell using powerful weapons and brutal combat. Known for its intense action and heavy metal atmosphere, it\u2019s a cornerstone of gaming history.",
+    "url": "../games/DOOM.html",
+    "image": "../assets/doom.png",
+    "category": "Shooter",
+    "id": "doom"
+  }
 ]

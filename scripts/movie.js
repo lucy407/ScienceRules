@@ -13,13 +13,33 @@ const servers = [
 
 const API_KEY = '93297ba3ed6357c086bc0c033b4bf7aa';
 
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 async function getMovieDetails(tmdbId, type = 'movie') {
-  const response = await fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${API_KEY}`);
-  return await response.json();
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${API_KEY}`);
+    if (!response.ok) throw new Error('Failed to fetch movie details');
+    return await response.json();
+  } catch (err) {
+    console.error('Error fetching movie details:', err);
+    return null;
+  }
 }
 
 async function fetchMovieLinks(tmdbId) {
   const movieDetails = await getMovieDetails(tmdbId);
+  if (!movieDetails) return null;
+  
   const title = movieDetails.title || movieDetails.name;
   const year = (movieDetails.release_date || movieDetails.first_air_date || '????').split('-')[0];
 
@@ -44,9 +64,12 @@ async function displayMovies(ids, totalResults, type = 'movie') {
   if (!movieListElement) return;
   clearMovies();
 
-  for (const tmdbId of ids) {
-    try {
-      const { movieDetails, links } = await fetchMovieLinks(tmdbId);
+  const promises = ids.map(tmdbId => fetchMovieLinks(tmdbId));
+  const results = await Promise.allSettled(promises);
+
+  results.forEach((result, index) => {
+    if (result.status === 'fulfilled' && result.value) {
+      const { movieDetails, links } = result.value;
 
       const movieDiv = document.createElement('div');
       movieDiv.classList.add('movie');
@@ -54,6 +77,7 @@ async function displayMovies(ids, totalResults, type = 'movie') {
       const poster = document.createElement('img');
       poster.src = movieDetails.poster_path ? `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}` : '';
       poster.alt = movieDetails.title || movieDetails.name;
+      poster.loading = 'lazy';
       movieDiv.appendChild(poster);
 
       const contentDiv = document.createElement('div');
@@ -89,6 +113,7 @@ async function displayMovies(ids, totalResults, type = 'movie') {
         const a = document.createElement('a');
         a.href = link;
         a.target = '_blank';
+        a.rel = 'noopener noreferrer';
         a.textContent = `Server ${i + 1}`;
         linksDiv.appendChild(a);
       });
@@ -96,20 +121,24 @@ async function displayMovies(ids, totalResults, type = 'movie') {
 
       movieDiv.appendChild(contentDiv);
       movieListElement.appendChild(movieDiv);
-    } catch (err) {
-      console.error(err);
     }
-  }
+  });
 
   const resultCount = document.getElementById('result-count');
   if (resultCount) resultCount.textContent = `Found ${totalResults} results`;
 }
 
 async function fetchPageResults(url) {
-  const res = await fetch(url);
-  const data = await res.json();
-  const ids = data.results.map(m => m.id);
-  return { ids, total: data.total_results };
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Failed to fetch results');
+    const data = await res.json();
+    const ids = data.results.map(m => m.id);
+    return { ids, total: data.total_results };
+  } catch (err) {
+    console.error('Error fetching page results:', err);
+    return { ids: [], total: 0 };
+  }
 }
 
 async function fetchPopular(type = 'movie') {
@@ -126,16 +155,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayMovies(ids, total, currentType);
 
   const searchInput = document.getElementById('search-input');
-  searchInput.addEventListener('input', async () => {
-    const query = searchInput.value.trim();
-    if (query) {
-      const { ids, total } = await searchMovies(query, currentType);
-      await displayMovies(ids, total, currentType);
-    } else {
-      const { ids, total } = await fetchPopular(currentType);
-      await displayMovies(ids, total, currentType);
-    }
-  });
+  if (searchInput) {
+    const debouncedSearch = debounce(async () => {
+      const query = searchInput.value.trim();
+      if (query) {
+        const { ids, total } = await searchMovies(query, currentType);
+        await displayMovies(ids, total, currentType);
+      } else {
+        const { ids, total } = await fetchPopular(currentType);
+        await displayMovies(ids, total, currentType);
+      }
+    }, 300);
+    searchInput.addEventListener('input', debouncedSearch);
+  }
 
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', async () => {

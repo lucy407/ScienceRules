@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navigator.userAgent
     ) || window.innerWidth <= 700;
 
-
   const popupDismissed = localStorage.getItem("mobilePopupDismissed");
 
   if (isMobile && !popupDismissed) {
@@ -20,19 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(popup);
 
     const closeBtn = document.getElementById("close-popup");
-    closeBtn.addEventListener("click", () => {
-
-      document.body.classList.add("mobile-mode");
-
-
-      popup.style.opacity = "0";
-      setTimeout(() => popup.remove(), 400);
-
-      
-      localStorage.setItem("mobilePopupDismissed", "true");
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        document.body.classList.add("mobile-mode");
+        popup.style.opacity = "0";
+        setTimeout(() => popup.remove(), 400);
+        localStorage.setItem("mobilePopupDismissed", "true");
+      });
+    }
   } else if (isMobile) {
-
     document.body.classList.add("mobile-mode");
   }
 });

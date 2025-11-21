@@ -1,7 +1,19 @@
 let allGames = [];
 let allCategories = new Set();
 
-fetch('/scripts/games.json')
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+fetch('../scripts/games.json')
   .then(res => {
     if (!res.ok) throw new Error('Failed to load games.json');
     return res.json();
@@ -13,10 +25,15 @@ fetch('/scripts/games.json')
     const sortedAZ = [...allGames].sort((a, b) => a.title.localeCompare(b.title));
     displayGames(sortedAZ);
   })
-  .catch(err => console.error('Error loading games:', err));
+  .catch(err => {
+    console.error('Error loading games:', err);
+    const gameList = document.getElementById('game-list');
+    if (gameList) gameList.innerHTML = '<p style="color: #ccc; padding: 20px;">Failed to load games. Please refresh the page.</p>';
+  });
 
 function setupSortDropdown() {
   const dropdown = document.getElementById('sort-dropdown');
+  if (!dropdown) return;
   dropdown.innerHTML = '';
 
   const baseOptions = ['A-Z', 'Newest', 'Oldest'];
@@ -54,26 +71,60 @@ function handleSortChange(e) {
   displayGames(sorted);
 }
 
+function updateFavoritesCount() {
+  const favCountElem = document.getElementById('favorites-count');
+  if (favCountElem) {
+    try {
+      const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+      favCountElem.textContent = favs.length;
+    } catch {
+      favCountElem.textContent = '0';
+    }
+  }
+}
+
 function displayGames(games) {
   const gameCountElem = document.getElementById('game-count');
-  gameCountElem.textContent = `${games.length}`;
+  if (gameCountElem) gameCountElem.textContent = `${games.length}`;
+  
+  updateFavoritesCount();
 
   const gameList = document.getElementById('game-list');
+  if (!gameList) return;
   gameList.innerHTML = '';
 
   games.forEach(game => {
     const card = document.createElement('div');
     card.className = 'game-card';
+    const isFav = typeof window !== 'undefined' && window.isFavorite && window.isFavorite(game.id);
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    const title = escapeHtml(game.title);
+    const desc = escapeHtml(game.description);
+    const category = escapeHtml(game.category);
+    const gameId = escapeHtml(game.id);
+    const image = escapeHtml(game.image);
+    const url = escapeHtml(game.url);
+    
     card.innerHTML = `
-      <img src="${game.image}" alt="${game.title}" class="game-image" />
-      <h3>${game.title}</h3>
-      <p>${game.description}</p>
-      <span id="category">${game.category}</span>
+      <img src="${image}" alt="${title}" class="game-image" loading="lazy" />
+      <div class="game-preview">
+        <h4>${title}</h4>
+        <p>${desc}</p>
+      </div>
+      <h3>${title}</h3>
+      <p>${desc}</p>
+      <span class="category">${category}</span>
       <div class="game-buttons">
+        <button class="favorite-btn ${isFav ? 'active' : ''}" data-game-id="${gameId}" data-game-title="${title}" aria-label="Toggle favorite">⭐</button>
         <button class="play-inside-btn">
-          ${game.noIframe ? 'Open in New Tab' : 'Play'}
+          ${game.gooseblock ? 'Open in New Tab' : 'Play'}
         </button>
-        <a href="${game.url}" target="_blank" rel="noopener noreferrer" class="external-link">
+        <a href="${url}" target="_blank" rel="noopener noreferrer" class="external-link">
           Open in New Tab
         </a>
       </div>
@@ -81,24 +132,36 @@ function displayGames(games) {
     gameList.appendChild(card);
 
     const playButton = card.querySelector('.play-inside-btn');
-
-    playButton.addEventListener('click', () => {
-      if (game.gooseblock) { // i called it gooseblock because i thought it was funny
-        window.open(game.url, '_blank', 'noopener,noreferrer');
-      } else {
-        openGameInIframe(game.url, game.title);
-      }
-    });
+    if (playButton) {
+      playButton.addEventListener('click', () => {
+        if (game.gooseblock) {
+          window.open(game.url, '_blank', 'noopener,noreferrer');
+        } else {
+          openGameInIframe(game.url, game.title);
+        }
+      });
+    }
+    
+    const favButton = card.querySelector('.favorite-btn');
+    if (favButton && typeof window !== 'undefined' && window.toggleFavorite) {
+      favButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isNowFav = window.toggleFavorite(game.id, game.title);
+        favButton.classList.toggle('active', isNowFav);
+        updateFavoritesCount();
+      });
+    }
   });
 }
 
 const searchInput = document.getElementById('game-search');
 if (searchInput) {
-  searchInput.addEventListener('input', e => {
+  const debouncedSearch = debounce((e) => {
     const query = e.target.value.toLowerCase();
     const filtered = allGames.filter(g => g.title.toLowerCase().includes(query));
     displayGames(filtered);
-  });
+  }, 300);
+  searchInput.addEventListener('input', debouncedSearch);
 }
 
 function openGameInIframe(url, title) {
@@ -107,14 +170,32 @@ function openGameInIframe(url, title) {
 
   frameContainer = document.createElement('div');
   frameContainer.id = 'game-iframe-container';
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+  
+  const safeTitle = escapeHtml(title);
+  const safeUrl = escapeHtml(url);
   frameContainer.innerHTML = `
     <div class="iframe-header">
-      <span>${title}</span>
+      <span>${safeTitle}</span>
       <button id="close-iframe-btn">✖</button>
     </div>
-    <iframe src="${url}" allowfullscreen></iframe>
+    <iframe src="${safeUrl}" allowfullscreen></iframe>
   `;
 
   document.body.appendChild(frameContainer);
-  document.getElementById('close-iframe-btn').onclick = () => frameContainer.remove();
+  const closeBtn = document.getElementById('close-iframe-btn');
+  if (closeBtn) {
+    closeBtn.onclick = () => frameContainer.remove();
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.displayGames = displayGames;
+  window.allGames = allGames;
+  window.updateFavoritesCount = updateFavoritesCount;
+  window.openGameInIframe = openGameInIframe;
 }

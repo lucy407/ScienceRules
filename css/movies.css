@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* { box-sizing: border-box; margin:0; padding:0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   background: linear-gradient(145deg, #0c0d11, #181b23);
   color: #e0e0e0;
   min-height: 100vh;
@@ -35,14 +37,22 @@ header {
   object-fit: contain;
   animation: spin 3s linear infinite;
   transition: transform 0.3s ease;
+  will-change: transform;
 }
-.atomlogo:hover { transform: rotate(5deg) scale(1.05); }
 
-@keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+.atomlogo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 h1 {
   font-size: 2.8em;
   color: #5ac8fa;
+  font-weight: 700;
 }
 
 h2 {
@@ -57,7 +67,10 @@ h2 {
   content: '|';
   animation: blink 1s step-end infinite;
 }
-@keyframes blink { 50%{opacity:0;} }
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
 nav {
   display: flex;
@@ -66,7 +79,9 @@ nav {
   background: #16171b;
   padding: 14px;
   box-shadow: inset 0 -1px 0 #222;
+  flex-wrap: wrap;
 }
+
 nav a {
   color: #e0e0e0;
   text-decoration: none;
@@ -75,18 +90,29 @@ nav a {
   padding: 10px 18px;
   border-radius: 10px;
   transition: all 0.3s ease;
+  will-change: transform;
 }
+
 nav a:hover {
   background: #5ac8fa33;
   color: #5ac8fa;
   box-shadow: 0 0 12px #5ac8fa44;
+  transform: translateY(-2px);
 }
 
+.content {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-@media(max-width:700px){
-  h1{font-size:2.2em;}
-  h2{font-size:1.1em;}
-  .carousel-section{max-width:95%;}
+.controls {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 #search-input {
@@ -99,12 +125,26 @@ nav a:hover {
   outline: none;
   margin: 20px 10px 20px 0;
   transition: border 0.3s, box-shadow 0.3s;
+  min-width: 250px;
 }
+
 #search-input:focus {
   border-color: #5ac8fa;
   box-shadow: 0 0 8px #5ac8fa55;
 }
 
+#result-count {
+  color: #5ac8fa;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
 
 .filters button {
   color: #e0e0e0;
@@ -115,10 +155,12 @@ nav a:hover {
   border-radius: 10px;
   transition: all 0.3s ease;
   background: #16171b;
-  border-style: solid;
-  border-color: rgb(43, 43, 43);
+  border: 1px solid #2b2b2b;
   margin: 5px;
+  cursor: pointer;
+  will-change: transform;
 }
+
 .filters button.active,
 .filters button:hover {
   transform: scale(1.05);
@@ -136,7 +178,6 @@ nav a:hover {
   margin-top: 30px;
 }
 
-
 .movie {
   background: #1a1c22;
   border-radius: 14px;
@@ -147,7 +188,9 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  will-change: transform;
 }
+
 .movie:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
@@ -181,6 +224,7 @@ nav a:hover {
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+
 .read-more-content.expanded {
   max-height: 500px;
 }
@@ -191,6 +235,11 @@ nav a:hover {
   color: #5ac8fa;
   cursor: pointer;
   margin-top: 5px;
+  transition: color 0.2s;
+}
+
+.read-more-toggle:hover {
+  color: #49b7d6;
 }
 
 .links {
@@ -210,18 +259,20 @@ nav a:hover {
   border-radius: 10px;
   transition: all 0.3s ease;
   background: #16171b;
-  border-style: solid;
-  border-color: rgb(43, 43, 43);
+  border: 1px solid #2b2b2b;
   margin: 5px;
+  will-change: transform;
 }
+
 .links a:hover {
   background: #49b7d6;
   border-color: #317c91;
+  transform: translateY(-2px);
 }
 
-@media(max-width:700px){
-  h1{font-size:2.2em;}
-  h2{font-size:1.1em;}
-  #movie-list{gap:14px;}
-  .movie img{height:120px;}
+@media (max-width: 700px) {
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.1em; }
+  #movie-list { gap: 14px; }
+  .movie img { height: 120px; }
 }

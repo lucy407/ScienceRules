@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>ScienceRules | Games</title>
   <link rel="stylesheet" href="../css/games.css">
-  <link rel="preload" href="../css/styles.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="../css/styles.css"></noscript>
+  <link rel="stylesheet" href="../css/features.css">
+  <link rel="stylesheet" href="../css/clock.css">
+  <link rel="preload" href="../css/styles.css" as="style">
+  <link rel="stylesheet" href="../css/styles.css">
   <meta name="robots" content="index, follow">
 
   <link rel="icon" type="image/png" href="../assets/atom.png">
@@ -14,10 +16,13 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="/assets/atom.png" alt="ScienceRules Logo" class="logo">
     <div>
-      <h1>ScienceRules</h1>
-      <h2>Games</h2> 
+      <img src="../assets/atom.png" alt="ScienceRules Logo" class="logo" loading="lazy">
+      <div>
+        <h1>ScienceRules</h1>
+        <h2>Games</h2>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -26,16 +31,21 @@
   <a href="/pages/domains.html">Alt Links</a>
   <a href="/pages/games.html">Games</a>
   <a href="/pages/shows.html">Shows & Movies</a>
+  <a href="/pages/settings.html">Settings</a>
   <a href="https://discord.gg/aSqgnkPRyD" target="_blank" rel="noopener">Discord</a>
 
 </nav>
 
   <section id="games-container" class="games-section">
     <h2 style="font-size: 25px; font-weight: 700;margin-bottom: 8px;">All webports belong to their proper owners, we do not make most of these.</h2>
-    <h2>Amount of games: <span id="game-count">0</span></h2>
-    <input type="text" id="game-search" placeholder="Search games..." />
-    <label>Sort:</label>
-    <select id="sort-dropdown"></select> <br>
+    <h2>Amount of games: <span id="game-count">0</span> | Favorites: <span id="favorites-count">0</span></h2>
+    <div style="display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+      <input type="text" id="game-search" placeholder="Search games... (Press / to focus)" />
+      <label>Sort:</label>
+      <select id="sort-dropdown"></select>
+      <button class="random-game-btn" id="random-game-btn">🎲 Random Game</button>
+      <button class="random-game-btn" id="favorites-btn" style="display: none;">⭐ Favorites</button>
+    </div>
    <script type="text/javascript">
 	atOptions = {
 		'key' : 'b73e358431b3d98e6b87ef9e14804dc3',
@@ -45,15 +55,116 @@
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/b73e358431b3d98e6b87ef9e14804dc3/invoke.js"></script>
+<script defer type="text/javascript" src="//www.highperformanceformat.com/b73e358431b3d98e6b87ef9e14804dc3/invoke.js"></script>
     <div id="game-list"></div>
 
   </section>
 
+  <script src="../scripts/cookieConsent.js"></script>
+  <script src="../scripts/themes.js"></script>
+  <script src="../scripts/features.js"></script>
+  <script src="../scripts/clock.js"></script>
   <script src="../scripts/loadGames.js"></script>
   <script src="../scripts/loading.js"></script>
   <script src="../scripts/mobile.js"></script>
+  <script>
+    window.isFavorite = function(gameId) {
+      const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+      return favs.includes(gameId);
+    };
+    
+    window.toggleFavorite = function(gameId, gameTitle) {
+      const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+      const index = favs.indexOf(gameId);
+      
+      if (index > -1) {
+        favs.splice(index, 1);
+        if (window.showToast) window.showToast(`Removed ${gameTitle} from favorites`, 'info');
+      } else {
+        favs.push(gameId);
+        if (window.showToast) window.showToast(`Added ${gameTitle} to favorites`, 'success');
+      }
+      
+      localStorage.setItem('gameFavorites', JSON.stringify(favs));
+      return favs.includes(gameId);
+    };
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const randomBtn = document.getElementById('random-game-btn');
+      const favoritesBtn = document.getElementById('favorites-btn');
+      
+      if (randomBtn) {
+        randomBtn.addEventListener('click', () => {
+          fetch('../scripts/games.json')
+            .then(res => res.json())
+            .then(games => {
+              const random = games[Math.floor(Math.random() * games.length)];
+              if (random.gooseblock) {
+                window.open(random.url, '_blank', 'noopener,noreferrer');
+              } else {
+                const iframe = document.createElement('div');
+                iframe.id = 'game-iframe-container';
+                iframe.innerHTML = `
+                  <div class="iframe-header">
+                    <span>${random.title}</span>
+                    <button id="close-iframe-btn">✖</button>
+                  </div>
+                  <iframe src="${random.url}" allowfullscreen></iframe>
+                `;
+                document.body.appendChild(iframe);
+                document.getElementById('close-iframe-btn').onclick = () => iframe.remove();
+              }
+              if (window.showToast) window.showToast(`Playing ${random.title}!`, 'success');
+            });
+        });
+      }
+      
+      let showingFavorites = false;
+      
+      function showFavorites() {
+        const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+        if (favs.length === 0) {
+          if (window.showToast) window.showToast('No favorites yet!', 'info');
+          return;
+        }
+        
+        if (typeof window.allGames !== 'undefined' && window.allGames.length > 0) {
+          const favoriteGames = window.allGames.filter(g => favs.includes(g.id));
+          if (favoriteGames.length > 0) {
+            showingFavorites = true;
+            if (typeof window.displayGames === 'function') {
+              window.displayGames(favoriteGames);
+            }
+            if (favoritesBtn) favoritesBtn.textContent = '← Back to All Games';
+          }
+        }
+      }
+      
+      function showAllGames() {
+        showingFavorites = false;
+        if (typeof window.allGames !== 'undefined' && window.allGames.length > 0 && typeof window.displayGames === 'function') {
+          const sortedAZ = [...window.allGames].sort((a, b) => a.title.localeCompare(b.title));
+          window.displayGames(sortedAZ);
+        }
+        if (favoritesBtn) favoritesBtn.textContent = '⭐ Favorites';
+      }
+      
+      if (favoritesBtn) {
+        const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+        if (favs.length > 0) {
+          favoritesBtn.style.display = 'inline-block';
+        }
+        favoritesBtn.addEventListener('click', () => {
+          if (showingFavorites) {
+            showAllGames();
+          } else {
+            showFavorites();
+          }
+        });
+      }
+    });
+  </script>
 
-<script type='text/javascript' src='//pl27826438.effectivegatecpm.com/bc/1e/38/bc1e38e5a736c394d1eec55bbb963065.js'></script>
+<script defer type='text/javascript' src='//pl27826438.effectivegatecpm.com/bc/1e/38/bc1e38e5a736c394d1eec55bbb963065.js'></script>
 </body>
 </html>
