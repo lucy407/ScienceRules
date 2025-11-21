@@ -44,7 +44,7 @@
       <label>Sort:</label>
       <select id="sort-dropdown"></select>
       <button class="random-game-btn" id="random-game-btn">🎲 Random Game</button>
-      <button class="random-game-btn" id="favorites-btn" style="display: none;">⭐ Favorites</button>
+      <button class="random-game-btn" id="favorites-btn"><span class="star-icon">⭐</span> Favorites</button>
     </div>
    <script type="text/javascript">
 	atOptions = {
@@ -135,7 +135,10 @@
             if (typeof window.displayGames === 'function') {
               window.displayGames(favoriteGames);
             }
-            if (favoritesBtn) favoritesBtn.textContent = '← Back to All Games';
+            if (favoritesBtn) {
+              favoritesBtn.innerHTML = '<span class="star-icon">⭐</span> Favorites';
+              favoritesBtn.classList.add('active');
+            }
           }
         }
       }
@@ -146,21 +149,53 @@
           const sortedAZ = [...window.allGames].sort((a, b) => a.title.localeCompare(b.title));
           window.displayGames(sortedAZ);
         }
-        if (favoritesBtn) favoritesBtn.textContent = '⭐ Favorites';
+        if (favoritesBtn) {
+          favoritesBtn.innerHTML = '<span class="star-icon">⭐</span> Favorites';
+          favoritesBtn.classList.remove('active');
+        }
       }
       
       if (favoritesBtn) {
-        const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
-        if (favs.length > 0) {
-          favoritesBtn.style.display = 'inline-block';
+        function updateFavoritesButtonText() {
+          if (showingFavorites) {
+            favoritesBtn.innerHTML = '<span class="star-icon">⭐</span> Favorites';
+            favoritesBtn.classList.add('active');
+          } else {
+            favoritesBtn.innerHTML = '<span class="star-icon">⭐</span> Favorites';
+            favoritesBtn.classList.remove('active');
+          }
         }
+        
         favoritesBtn.addEventListener('click', () => {
           if (showingFavorites) {
             showAllGames();
+            const dropdown = document.getElementById('sort-dropdown');
+            if (dropdown) {
+              dropdown.value = 'A-Z';
+              dropdown.dispatchEvent(new Event('change'));
+            }
           } else {
-            showFavorites();
+            const dropdown = document.getElementById('sort-dropdown');
+            if (dropdown) {
+              dropdown.value = 'Favorites';
+              dropdown.dispatchEvent(new Event('change'));
+            }
           }
+          updateFavoritesButtonText();
         });
+        
+        const dropdown = document.getElementById('sort-dropdown');
+        if (dropdown) {
+          dropdown.addEventListener('change', (e) => {
+            if (e.target.value === 'Favorites') {
+              favoritesBtn.classList.add('active');
+              showingFavorites = true;
+            } else {
+              favoritesBtn.classList.remove('active');
+              showingFavorites = false;
+            }
+          });
+        }
       }
     });
   </script>

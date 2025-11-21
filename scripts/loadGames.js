@@ -36,7 +36,7 @@ function setupSortDropdown() {
   if (!dropdown) return;
   dropdown.innerHTML = '';
 
-  const baseOptions = ['A-Z', 'Newest', 'Oldest'];
+  const baseOptions = ['A-Z', 'Newest', 'Oldest', 'Favorites'];
   baseOptions.forEach(opt => {
     const option = document.createElement('option');
     option.value = opt;
@@ -57,6 +57,12 @@ function setupSortDropdown() {
 
 function handleSortChange(e) {
   const sortType = e.target.value;
+  
+  if (!allGames || allGames.length === 0) {
+    console.warn('allGames not loaded yet');
+    return;
+  }
+  
   let sorted = [...allGames];
 
   if (sortType === 'A-Z') {
@@ -64,6 +70,22 @@ function handleSortChange(e) {
   } else if (sortType === 'Newest') {
     sorted = sorted.reverse();
   } else if (sortType === 'Oldest') {
+  } else if (sortType === 'Favorites') {
+    try {
+      const favs = JSON.parse(localStorage.getItem('gameFavorites') || '[]');
+      if (favs.length === 0) {
+        if (window.showToast) window.showToast('No favorites yet!', 'info');
+        sorted = [];
+      } else {
+        sorted = allGames.filter(g => g && g.id && favs.includes(g.id));
+        if (sorted.length === 0) {
+          if (window.showToast) window.showToast('No favorites found!', 'info');
+        }
+      }
+    } catch (err) {
+      console.error('Error loading favorites:', err);
+      sorted = [];
+    }
   } else {
     sorted = allGames.filter(g => g.category === sortType);
   }
@@ -120,7 +142,7 @@ function displayGames(games) {
       <p>${desc}</p>
       <span class="category">${category}</span>
       <div class="game-buttons">
-        <button class="favorite-btn ${isFav ? 'active' : ''}" data-game-id="${gameId}" data-game-title="${title}" aria-label="Toggle favorite">⭐</button>
+        <button class="favorite-btn ${isFav ? 'active' : ''}" data-game-id="${gameId}" data-game-title="${title}" aria-label="Toggle favorite">${isFav ? '✕' : '⭐'}</button>
         <button class="play-inside-btn">
           ${game.gooseblock ? 'Open in New Tab' : 'Play'}
         </button>
@@ -148,6 +170,13 @@ function displayGames(games) {
         e.stopPropagation();
         const isNowFav = window.toggleFavorite(game.id, game.title);
         favButton.classList.toggle('active', isNowFav);
+        favButton.textContent = isNowFav ? '✕' : '⭐';
+        
+        favButton.classList.add('favorite-animate');
+        setTimeout(() => {
+          favButton.classList.remove('favorite-animate');
+        }, 600);
+        
         updateFavoritesCount();
       });
     }
