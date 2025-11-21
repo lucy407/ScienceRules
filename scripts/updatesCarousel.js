@@ -7,12 +7,17 @@ const updateImages = [
 ];
 
 let currentUpdateIndex = 0;
-let autoSlideInterval;
+let updateAutoSlideInterval;
 let isCinematicView = false;
 
 function renderUpdatesCarousel() {
   const carousel = document.getElementById('updates-carousel');
   if (!carousel) return;
+  
+  const slideContainer = carousel.querySelector('.update-slide-container');
+  if (slideContainer) {
+    slideContainer.removeEventListener('click', openCinematicView);
+  }
   
   carousel.innerHTML = `
     <div class="update-slide-container">
@@ -23,26 +28,36 @@ function renderUpdatesCarousel() {
     </div>
   `;
   
-  const slideContainer = carousel.querySelector('.update-slide-container');
-  if (slideContainer) {
-    slideContainer.addEventListener('click', openCinematicView);
+  const newSlideContainer = carousel.querySelector('.update-slide-container');
+  if (newSlideContainer) {
+    newSlideContainer.addEventListener('click', openCinematicView);
   }
   
-  startAutoSlide();
+  if (!isCinematicView) {
+    startAutoSlide();
+  }
 }
 
 function startAutoSlide() {
-  clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(() => {
-    currentUpdateIndex = (currentUpdateIndex + 1) % updateImages.length;
-    renderUpdatesCarousel();
+  clearInterval(updateAutoSlideInterval);
+  updateAutoSlideInterval = setInterval(() => {
+    if (!isCinematicView) {
+      currentUpdateIndex = (currentUpdateIndex + 1) % updateImages.length;
+      renderUpdatesCarousel();
+    }
   }, 4000);
 }
 
 function openCinematicView() {
   if (isCinematicView) return;
   isCinematicView = true;
+  clearInterval(updateAutoSlideInterval);
   document.body.style.overflow = 'hidden';
+  
+  const existingOverlay = document.querySelector('.cinematic-overlay');
+  if (existingOverlay) {
+    existingOverlay.remove();
+  }
   
   const cinematicOverlay = document.createElement('div');
   cinematicOverlay.className = 'cinematic-overlay';
@@ -108,7 +123,7 @@ function closeCinematicView() {
   }
   isCinematicView = false;
   document.body.style.overflow = '';
-  renderUpdatesCarousel();
+  startAutoSlide();
 }
 
 if (document.readyState === 'loading') {

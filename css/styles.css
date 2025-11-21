@@ -206,6 +206,8 @@ nav a:hover {
   text-align: center;
   color: #fff;
   font-family: system-ui, sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .carousel-section h2,
@@ -222,6 +224,8 @@ nav a:hover {
   max-width: 1400px;
   margin: 3rem auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .updates-carousel {
@@ -292,11 +296,12 @@ nav a:hover {
   width: 100vw;
   height: 100vh;
   background: #000;
-  z-index: 99999;
+  z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: cinematicFadeIn 0.5s ease;
+  isolation: isolate;
 }
 
 @keyframes cinematicFadeIn {
