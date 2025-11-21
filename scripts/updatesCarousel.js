@@ -25,9 +25,6 @@ function renderUpdatesCarousel() {
   carousel.innerHTML = `
     <div class="update-slide-container">
       <img src="${updateImages[currentUpdateIndex].src}" alt="${updateImages[currentUpdateIndex].title}" class="update-slide-image" loading="lazy">
-      <div class="update-slide-overlay">
-        <p class="update-slide-text">See the newest updates</p>
-      </div>
     </div>
   `;
   
