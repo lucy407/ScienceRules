@@ -12,7 +12,10 @@ let isCinematicView = false;
 
 function renderUpdatesCarousel() {
   const carousel = document.getElementById('updates-carousel');
-  if (!carousel) return;
+  if (!carousel) {
+    console.warn('Updates carousel element not found');
+    return;
+  }
   
   const slideContainer = carousel.querySelector('.update-slide-container');
   if (slideContainer) {
@@ -32,14 +35,11 @@ function renderUpdatesCarousel() {
   if (newSlideContainer) {
     newSlideContainer.addEventListener('click', openCinematicView);
   }
-  
-  if (!isCinematicView) {
-    startAutoSlide();
-  }
 }
 
 function startAutoSlide() {
   clearInterval(updateAutoSlideInterval);
+  if (isCinematicView) return;
   updateAutoSlideInterval = setInterval(() => {
     if (!isCinematicView) {
       currentUpdateIndex = (currentUpdateIndex + 1) % updateImages.length;
@@ -126,9 +126,29 @@ function closeCinematicView() {
   startAutoSlide();
 }
 
+function initUpdatesCarousel() {
+  const carousel = document.getElementById('updates-carousel');
+  if (!carousel) {
+    if (document.readyState === 'complete') {
+      console.error('Updates carousel element not found after page load');
+      return;
+    }
+    setTimeout(initUpdatesCarousel, 100);
+    return;
+  }
+  try {
+    renderUpdatesCarousel();
+    if (!isCinematicView) {
+      startAutoSlide();
+    }
+  } catch (error) {
+    console.error('Error initializing updates carousel:', error);
+  }
+}
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderUpdatesCarousel);
+  document.addEventListener('DOMContentLoaded', initUpdatesCarousel);
 } else {
-  renderUpdatesCarousel();
+  initUpdatesCarousel();
 }
 
